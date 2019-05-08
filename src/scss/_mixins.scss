@@ -1,4 +1,10 @@
-@mixin container {
+@mixin container() {
   width: 97.4%;
   margin: 0 auto;
+}
+
+@mixin ul-reset() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }

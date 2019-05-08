@@ -1,0 +1,47 @@
+.sidebar {
+  position: fixed;
+  left: 2.46%;
+
+  &__nav-list {
+    @include ul-reset();
+  }
+
+  &__nav-item {
+    &:first-of-type {
+      a {
+        padding-top: 0;
+      }
+    }
+
+    svg {
+      position: relative;
+      top: -1px;
+      margin-right: 20px;
+
+      * {
+        fill: $gray-600;
+      }
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      padding: 13px 0;
+      font-size: 16px;
+      text-decoration: none;
+      color: $gray-600;
+    }
+
+    &--active {
+      a {
+        color: $brand-dark-color;
+      }
+
+      svg {
+        * {
+          fill: $brand-dark-color;
+        }
+      }
+    }
+  }
+}
