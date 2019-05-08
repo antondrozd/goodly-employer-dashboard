@@ -1,3 +1,65 @@
 extends /layouts/setup
-
+include /mixins/setup-steps.pug
 block setup
+    .card.card--setup
+        +setup-steps(3)
+        div.setup-customize-with-programs
+            img.setup-customize-with-programs__img(src="/img/customize-with-programs.png" width='95' height='135')
+            div.setup-customize-with-programs__content
+                div.setup-customize-with-programs__title Customize with Programs
+                div.setup-customize-with-programs__subtitle Use programs to customize employee contribution based on time, department, etc.
+                    a(href='#') Learn more
+        form(method='POST' action='/register')
+            div.setup-form.setup-form--step-3
+                div.setup-form__item
+                    div.form-group
+                        label.form-group__label(for='programName') Program Name
+                        input#programName.form-group__control(type='text', placeholder='Enter name (ex. Marketing Team)' name='programName')
+                    div.form-group
+                        label.form-group__label.form-group__label--info Assistance Type
+                        input#radio1.form-group__radio(type='radio' name='assistanceType')
+                        label.form-group__label-radio(for='radio1') Contribution
+                        input#radio2.form-group__radio(type='radio' name='assistanceType')
+                        label.form-group__label-radio(for='radio2') Deduction
+                    div.form-group
+                        label.form-group__label(for='description') Description
+                        input#description.form-group__control(type='text', placeholder='Description' name='description')
+
+                div.setup-form__item
+                    div.form-group
+                        label.form-group__label.form-group__label--info(for='payrollCode') Payroll Code
+                        input#payrollCode.form-group__control(type='text', placeholder='Enter code' name='payrollCode')
+                    div.form-group
+                        label.form-group__label.form-group__label--info Contribution vesting schedule
+                        div.form-group__control--wrapper
+                            select.form-group__control(style={'width': '35%'})
+                                option(value='') 1
+                                option(value='') 2
+                                option(value='') 3
+                            select.form-group__control(style={'width': '35%'})
+                                option(value='') 1
+                                option(value='') 2
+                                option(value='') 3
+                            input.form-group__control(type='text' style={'flex': '1'})
+                        a.btn--add-new(href='#') Add another level
+                    div.form-group
+                        label.form-group__label.form-group__label--info(for='defaultContributionAmount') Default contribution amount
+                        input#defaultContributionAmount.form-group__control(type='text', placeholder='$0.00' name='defaultContributionAmount')
+                //div.setup-form__item
+                //    div.form-group
+                //        label.form-group__label(for='accountNumber') Account Number
+                //        input#accountNumber.form-group__control(type='text' placeholder='Account Number' name='accountNumber')
+                //div.setup-form__item
+                //    div.form-group
+                //        label.form-group__label(for='accountHolderName') Account Holder Name
+                //        input#accountHolderName.form-group__control(type='text' placeholder='Account Holder Name' name='accountHolderName')
+                //div.setup-form__item
+                //    div.form-group
+                //        label.form-group__label(for='confirmAccountNumber') Confirm Account Number
+                //        input#confirmAccountNumber.form-group__control(type='text' placeholder='Confirm Account Number' name='confirmAccountNumber')
+                //div.setup-form__item
+                //div.setup-form__item
+                //    div.form-group
+                //        input#termsConditions.form-group__checkbox(type='checkbox')
+                //        label.form-group__label-checkbox(for='termsConditions') I have read the terms and conditions for payment by ACH, and hereby authorize Goodly to deduct payment from my bank account by ACH.
+            button.btn.btn--setup(type='button' disabled=true) Next

@@ -1,3 +1,29 @@
 extends /layouts/setup
+include /mixins/setup-steps.pug
 
 block setup
+    .card.card--setup
+        +setup-steps(1)
+        form(method='POST' action='/register')
+            div.setup-form
+                div.setup-form__item
+                    div.form-group
+                        label.form-group__label(for='companyName') Company Name
+                        input#companyName.form-group__control(type='text', placeholder='Enter name' name='companyName')
+                    div.form-group
+                        label.form-group__label.form-group__label--info(for='companyLegalName') Company Legal Name
+                        input#companyLegalName.form-group__control(type='text', placeholder='Company Legal Name' name='companyLegalName')
+                div.setup-form__item
+                    div.form-group
+                        label.form-group__label.form-group__label--info(for='tinEin') TIN/EIN
+                        input#tinEin.form-group__control(type='text', placeholder='xx-xxxxxxx' name='tinEin')
+                    div.form-group
+                        label.form-group__label(for='businessType') Business Type
+                        select#businessType.form-group__control
+                            option(value='') 1
+                            option(value='') 2
+                            option(value='') 3
+
+                        //input#businessType.form-group__control(type='text' name='businessType')
+
+            button.btn.btn--setup(type='button' disabled=true) Next

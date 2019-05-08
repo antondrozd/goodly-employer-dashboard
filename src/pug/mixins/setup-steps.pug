@@ -1,0 +1,38 @@
+mixin setup-step(index)
+    case index
+        when 1
+            span.setup-steps__number= index
+                include /icons/check
+            span.setup-steps__text Company Info
+
+        when 2
+            span.setup-steps__number= index
+                include /icons/check
+            span.setup-steps__text Bank Account
+
+        when 3
+            span.setup-steps__number= index
+                include /icons/check
+            span.setup-steps__text Programs
+
+        when 4
+            span.setup-steps__number= index
+                include /icons/check
+            span.setup-steps__text Invite Employees
+
+mixin setup-steps(activeIndex)
+    - const steps = [1, 2, 3, 4]
+
+    ul.setup-steps__list
+        each step in steps
+            - if (step < activeIndex)
+                li.setup-steps__item.setup-steps__item--completed
+                    +setup-step(step)
+
+            - if (step === activeIndex)
+                li.setup-steps__item.setup-steps__item--active
+                    +setup-step(step)
+
+            - if (step > activeIndex)
+                li.setup-steps__item
+                    +setup-step(step)

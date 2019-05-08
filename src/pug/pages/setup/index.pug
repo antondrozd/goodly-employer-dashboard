@@ -1,4 +1,12 @@
 extends /layouts/setup
 
 block setup
-  .card hello world
+    .card.card--setup
+        .setup-main
+            .setup-main__content
+                .setup-main__title Welcome to Goodly
+                .setup-main__description Goodly helps you contribute to your employees’ student loans, on top of their regular payments.
+                .setup-main__description Employees can automate payments directly from their paycheck to save on interest and pay-off debt faster.
+                a.btn(href='') Let's get started
+            .setup-main__img
+                img(src='/img/setup-main.png')

@@ -1,0 +1,14 @@
+.setup-form {
+  padding: 61px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 82px;
+  &--step-3 {
+    padding-top: 16px;
+  }
+  &__item {
+    flex-basis: 39%;
+    padding: 0 41px;
+  }
+}

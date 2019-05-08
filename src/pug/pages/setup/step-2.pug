@@ -1,3 +1,39 @@
 extends /layouts/setup
-
+include /mixins/setup-steps.pug
 block setup
+    .card.card--setup
+        +setup-steps(2)
+        form(method='POST' action='/register')
+            div.setup-form
+                div.setup-form__item
+                    div.form-group
+                        label.form-group__label(for='company') Account Holder
+                        select#company.form-group__control
+                            option(value='') 1
+                            option(value='') 2
+                            option(value='') 3
+                    div.form-group
+                        label.form-group__label(for='accountType') Account Type
+                        select#accountType.form-group__control
+                            option(value='') 1
+                            option(value='') 2
+                            option(value='') 3
+                    div.form-group
+                        label.form-group__label.form-group__label--info(for='accountHolderName') Account Holder Name
+                        input#accountHolderName.form-group__control(type='text' placeholder='Account Holder Name' name='accountHolderName')
+
+                div.setup-form__item
+                    div.form-group
+                        label.form-group__label(for='routingNumber') Routing Number
+                        input#routingNumber.form-group__control(type='text', placeholder='Routing Number' name='routingNumber')
+                    div.form-group
+                        label.form-group__label(for='accountNumber') Account Number
+                        input#accountNumber.form-group__control(type='text' placeholder='Account Number' name='accountNumber')
+                    div.form-group
+                        label.form-group__label(for='confirmAccountNumber') Confirm Account Number
+                        input#confirmAccountNumber.form-group__control(type='text' placeholder='Confirm Account Number' name='confirmAccountNumber')
+                    div.form-group
+                        input#termsConditions.form-group__checkbox(type='checkbox')
+                        label.form-group__label-checkbox(for='termsConditions') I have read the terms and conditions for payment by ACH, and hereby authorize Goodly to deduct payment from my bank account by ACH.
+
+            button.btn.btn--setup(type='button' disabled=true) Next

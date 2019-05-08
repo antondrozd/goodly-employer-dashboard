@@ -1,3 +1,5 @@
 extends /layouts/setup
-
+include /mixins/setup-steps.pug
 block setup
+    .card.card--setup
+        +setup-steps(4)
