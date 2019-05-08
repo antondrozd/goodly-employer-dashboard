@@ -1,0 +1,37 @@
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 32px;
+  background-color: $white;
+  border-bottom: 1px solid $medium-gray;
+  
+  &__wrapper {
+    @include container();
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__user-block {
+    display: flex;
+    align-items: center;
+    margin-right: 36px;
+  }
+  
+  &__user-photo {
+    width: 32px;
+    height: 32px;
+    margin-left: 35px;
+  }
+
+  &__user-name {
+    padding-right: 21px;
+    padding-left: 12px;
+    font-size: 18px;
+    // font-weight: $regular;
+  }
+}
