@@ -1,0 +1,30 @@
+mixin sidebar(activeLink)
+  - const links = ['Home', 'Benefit Runs', 'Programs', 'Employees']
+  - const routes = links.map(link => `/${link.replace(' ', '-').toLowerCase()}`)
+
+  .sidebar
+    ul.sidebar__nav-list
+      each link, index in links
+        - const route = routes[index]
+
+        - if (link === activeLink)
+          li.sidebar__nav-item.sidebar__nav-item--active
+            a
+              +icon(link)
+              | #{link}
+        - else
+          li.sidebar__nav-item
+            a(href!= route)
+              +icon(link)
+              | #{link}
+
+mixin icon(name)
+  case name
+    when 'Home'
+      include /icons/sidebar/home
+    when 'Benefit Runs'
+      include /icons/sidebar/benefit-runs
+    when 'Programs'
+      include /icons/sidebar/programs
+    when 'Employees'
+      include /icons/sidebar/employees
