@@ -2,6 +2,7 @@
 @import 'mixins';
 @import 'global';
 @import 'fonts';
+@import 'btn';
 @import 'blocks/logo';
 @import 'blocks/main-header';
 @import 'blocks/sidebar';
@@ -10,3 +11,6 @@
 @import 'blocks/card';
 @import 'blocks/stats';
 @import 'blocks/dashboard';
+@import 'blocks/setup';
+@import 'blocks/steps';
+@import 'blocks/form-group';

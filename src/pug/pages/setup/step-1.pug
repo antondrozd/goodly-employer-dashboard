@@ -1,3 +1,33 @@
 extends /layouts/setup
 
+include /mixins/setup-steps
+
+append head
+  title Goodly Setup | Company info
+
 block setup
+  .card.card--setup
+    .setup
+      +setup-steps({ activeStep: 1 })
+      form.setup__form(method='POST' action='/register')
+        .setup__container
+          .setup__column
+            .form-group
+              label.form-group__label(for='companyName') Company Name
+              input#companyName.form-group__control(type='text', placeholder='Enter name' name='companyName')
+            .form-group
+              label.form-group__label.form-group__label--info(for='companyLegalName') Company Legal Name
+              input#companyLegalName.form-group__control(type='text', placeholder='Company Legal Name' name='companyLegalName')
+          .setup__column
+            .form-group
+              label.form-group__label.form-group__label--info(for='tinEin') TIN/EIN
+              input#tinEin.form-group__control(type='text', placeholder='xx-xxxxxxx' name='tinEin')
+            .form-group
+              label.form-group__label(for='businessType') Business Type
+              select#businessType.form-group__control
+                option(value='' disabled selected) Select business type
+                option(value='') 1
+                option(value='') 2
+                option(value='') 3
+
+        a.btn.setup__btn(href="./step-2") Next

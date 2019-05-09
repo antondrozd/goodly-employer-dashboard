@@ -1,3 +1,44 @@
 extends /layouts/setup
 
+include /mixins/setup-steps
+
+append head
+  title Goodly Setup | Bank Account
+
 block setup
+  .card.card--setup
+    .setup
+      +setup-steps({ activeStep: 2 })
+      form.setup__form(method='POST' action='/register')
+        .setup__container
+          .setup__column
+            .form-group
+              label.form-group__label(for='company') Account Holder
+              select#company.form-group__control
+                option(value='') 1
+                option(value='') 2
+                option(value='') 3
+            .form-group
+              label.form-group__label(for='accountType') Account Type
+              select#accountType.form-group__control
+                option(value='') 1
+                option(value='') 2
+                option(value='') 3
+            .form-group
+              label.form-group__label.form-group__label--info(for='accountHolderName') Account Holder Name
+              input#accountHolderName.form-group__control(type='text' placeholder='Account Holder Name' name='accountHolderName')
+          .setup__column
+            .form-group
+              label.form-group__label(for='routingNumber') Routing Number
+              input#routingNumber.form-group__control(type='text', placeholder='Routing Number' name='routingNumber')
+            .form-group
+              label.form-group__label(for='accountNumber') Account Number
+              input#accountNumber.form-group__control(type='text' placeholder='Account Number' name='accountNumber')
+            .form-group
+              label.form-group__label(for='confirmAccountNumber') Confirm Account Number
+              input#confirmAccountNumber.form-group__control(type='text' placeholder='Confirm Account Number' name='confirmAccountNumber')
+            .form-group
+              input#termsConditions.form-group__checkbox(type='checkbox')
+              label.form-group__label-checkbox(for='termsConditions') I have read the terms and conditions for payment by ACH, and hereby authorize Goodly to deduct payment from my bank account by ACH.
+
+        a.btn.setup__btn(href="./step-3") Next

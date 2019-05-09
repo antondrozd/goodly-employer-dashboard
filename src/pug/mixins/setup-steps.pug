@@ -1,0 +1,46 @@
+mixin setup-steps({ activeStep, modifier })
+  - const steps = [1, 2, 3, 4]
+  - const hrefs = steps.map(step => `./step-${step}`)
+  - const classNameWithModifier = modifier ? `setup__steps--${modifier}` : ''
+
+  .steps.setup__steps(class!= classNameWithModifier)
+    ul.steps__list
+      each step, index in steps
+        - const href = hrefs[index]
+
+        - if (step < activeStep)
+          li.steps__item.steps__item--completed
+            a.steps__item-inner(href!= href)
+              +setup-step(step)
+
+        - if (step === activeStep)
+          li.steps__item.steps__item--active
+            .steps__item-inner
+              +setup-step(step)
+
+        - if (step > activeStep)
+          li.steps__item
+            .steps__item-inner
+              +setup-step(step)
+
+mixin setup-step(index)
+  case index
+    when 1
+      span.steps__number= index
+        include /icons/check
+      span.steps__text Company Info
+
+    when 2
+      span.steps__number= index
+        include /icons/check
+      span.steps__text Bank Account
+
+    when 3
+      span.steps__number= index
+        include /icons/check
+      span.steps__text Programs
+
+    when 4
+      span.steps__number= index
+        include /icons/check
+      span.steps__text Invite Employees
