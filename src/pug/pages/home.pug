@@ -4,5 +4,38 @@ include /mixins/sidebar
 append head
   title Home
 
-block dashboard
+block sidebar
   +sidebar('Home')
+
+block dashboard
+  main.main-content.dashboard
+    article.card.card--stats.stats
+      ul.stats__list
+        li.stats__item
+          span.stats__icon
+            include /icons/dollar
+          span.stats__text Total contribution to employees
+          b.stats__info $14,928
+        li.stats__item
+          span.stats__icon
+            include /icons/person
+          span.stats__text Employees using Goodly
+          b.stats__info 12 employees
+        li.stats__item
+          span.stats__icon
+            include /icons/check
+          span.stats__text Total Employee loans paid off
+          b.stats__info 7 loans
+        li.stats__item
+          span.stats__icon
+            include /icons/check
+          span.stats__text Total Employer Contributions
+          b.stats__info $2,460
+
+    .dashboard__column
+      .card
+        .card__container
+          h2.card__title Employee Account Overview
+            .card__graph.card__graph--employee-account
+              img(src="/img/graphs/employee-account.svg")
+    .dashboard__column

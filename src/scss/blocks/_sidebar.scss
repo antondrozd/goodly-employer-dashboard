@@ -1,5 +1,6 @@
 .sidebar {
   position: fixed;
+  top: 106px;
   left: 2.46%;
 
   &__nav-list {
@@ -7,6 +8,8 @@
   }
 
   &__nav-item {
+    padding-right: 105px;
+
     &:first-of-type {
       a {
         padding-top: 0;
@@ -35,6 +38,7 @@
     &--active {
       a {
         color: $brand-dark-color;
+        cursor: default;
       }
 
       svg {

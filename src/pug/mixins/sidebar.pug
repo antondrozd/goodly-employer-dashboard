@@ -2,7 +2,7 @@ mixin sidebar(activeLink)
   - const links = ['Home', 'Benefit Runs', 'Programs', 'Employees']
   - const routes = links.map(link => `/${link.replace(' ', '-').toLowerCase()}`)
 
-  .sidebar
+  nav.sidebar
     ul.sidebar__nav-list
       each link, index in links
         - const route = routes[index]

@@ -3,3 +3,7 @@ body {
   font-family: $main-font;
   background-color: $body-color;
 }
+
+img {
+  max-width: 100%;
+}

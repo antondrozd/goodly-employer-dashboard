@@ -16,7 +16,8 @@ function style() {
     .pipe(
       postcss([
         autoprefixer({
-          browsers: ['last 2 versions']
+          browsers: ['last 2 versions'],
+          grid: true
         })
       ])
     )
@@ -57,7 +58,7 @@ function clean() {
 
 function copy() {
   return gulp
-    .src(['src/fonts/**/*.{woff,woff2,ttf}', 'src/js/**'], {
+    .src(['src/fonts/**/*.{woff,woff2,ttf}', 'src/js/**', 'src/img/**/*.svg'], {
       base: 'src'
     })
     .pipe(gulp.dest('build'))

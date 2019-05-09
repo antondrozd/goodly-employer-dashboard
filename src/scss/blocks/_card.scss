@@ -1,8 +1,31 @@
 .card {
-  padding: 25px;
+  margin-bottom: $dashboard-gap;
   background-color: $white;
   border: 1px solid $gray-100;
   border-radius: 8px;
+
+  &__container {
+    padding: 32px;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: $medium;
+    color: $brand-dark-color;
+  }
+
+  &__graph {
+    &--employee-account {
+      margin-top: 55px;
+      margin-bottom: 25px;
+      margin-left: 21px;
+    }
+  }
+
+  &--stats {
+    padding: 0;
+  }
 
   &--setup {
     // todo here Bohdan

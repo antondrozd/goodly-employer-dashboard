@@ -1,0 +1,16 @@
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__column {
+    box-sizing: border-box;
+    width: 50%;
+
+    &:first-of-type {
+      padding-right: $dashboard-gap / 2;
+    }
+    &:last-of-type {
+      padding-left: $dashboard-gap / 2;
+    }
+  }
+}
