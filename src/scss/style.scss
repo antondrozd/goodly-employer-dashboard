@@ -2,7 +2,8 @@
 @import 'mixins';
 @import 'global';
 @import 'fonts';
-@import 'btn';
+@import 'blocks/btn';
+@import 'blocks/dropdown';
 @import 'blocks/logo';
 @import 'blocks/main-header';
 @import 'blocks/sidebar';
@@ -14,3 +15,4 @@
 @import 'blocks/setup';
 @import 'blocks/steps';
 @import 'blocks/form-group';
+@import 'blocks/share-link';
