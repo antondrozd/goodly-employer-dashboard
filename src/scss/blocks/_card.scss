@@ -51,6 +51,10 @@
     line-height: 28px;
     font-weight: $medium;
     color: $brand-dark-color;
+
+    &--big {
+      font-size: 24px;
+    }
   }
 
   &__subtitle {
@@ -59,6 +63,29 @@
     font-weight: $light;
     line-height: 1;
     color: $gray-800;
+  }
+
+  &__brand-dark-text {
+    margin-top: 17px;
+    font-size: 15px;
+    color: $brand-dark-color;
+  }
+
+  &__light-text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.3;
+    font-weight: $light;
+    color: $gray-500;
+  }
+
+  &__share-link {
+    margin-top: 15px;
+    margin-bottom: 13px;
+  }
+
+  &__btn {
+    margin-top: 34px;
   }
 
   &__amount {
@@ -98,7 +125,7 @@
 
   &__graph {
     &--employee-account {
-      margin-top: 55px;
+      margin-top: 52px;
       margin-bottom: 25px;
       margin-left: 21px;
     }
