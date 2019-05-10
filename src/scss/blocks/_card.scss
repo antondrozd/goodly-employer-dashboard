@@ -135,6 +135,29 @@
     padding: 0;
   }
 
+  &--with-bg-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .card {
+      &__title {
+        margin-top: 100px;
+        font-size: 32px;
+        line-height: 1.3;
+        color: $white;
+      }
+
+      &__btn {
+        margin-top: 12px;
+      }
+    }
+  }
+
+  &--bg-img-1 {
+    background-image: url('/img/benefits-and-runs.jpg');
+  }
+
   &--setup {
     padding: 32px 25px;
 
