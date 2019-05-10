@@ -1,0 +1,23 @@
+.dropdown {
+  @include icon-btn();
+  position: relative;
+  padding: 7px 12px;
+
+  &__icon {
+    svg {
+      * {
+        fill: $gray-600;
+      }
+    }
+  }
+
+  &__list {
+    @include ul-reset();
+    position: absolute;
+    display: none;
+  }
+
+  &__item {
+
+  }
+}

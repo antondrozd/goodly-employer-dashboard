@@ -6,3 +6,70 @@ append head
 
 block dashboard
   +sidebar('Programs')
+  main.main-content.dashboard
+    a
+    .dashboard__column
+      .card
+        .card__container.card__container--centered
+          .card__heading-icon
+            include /icons/fatured-play-list
+          h2.card__title Customize with Programs
+          p.card__subtitle Use programs to customize employee contribution based on time, department, and more.
+          button.btn.btn--size-25.card__btn Add program
+      .card
+        .card__container
+          button.card__dropdown.dropdown(type="button")
+            .dropdown__icon
+              include /icons/dropdown
+            ul.dropdown__list
+              li.dropdown__item 1
+              li.dropdown__item 2
+          h2.card__title Marketing Program
+          p.card__subtitle All employees in the Marketing ladder (Code: WNE)
+          .card__amount
+            span.card__amount-text Contribution amount
+            b.card__amount-sum $150.00 monthly
+          .card__employees-in-program
+            include /icons/sidebar/employees
+            | 3 employees in this program
+      .card
+        .card__container
+          button.card__dropdown.dropdown(type="button")
+            .dropdown__icon
+              include /icons/dropdown
+          h2.card__title Support Program
+          p.card__subtitle Customer support, use ENG program for QA
+          .card__amount
+            span.card__amount-text Contribution amount
+            b.card__amount-sum $200.00 monthly
+          .card__employees-in-program
+            include /icons/sidebar/employees
+            | 2 employees in this program
+          
+    .dashboard__column
+      .card
+        .card__container
+          button.card__dropdown.dropdown(type="button")
+            .dropdown__icon
+              include /icons/dropdown
+          h2.card__title Engineering Program
+          p.card__subtitle Program for all SWE, Product, and QA employees
+          .card__amount
+            span.card__amount-text Contribution amount
+            b.card__amount-sum $100.00 monthly
+          .card__employees-in-program
+            include /icons/sidebar/employees
+            | 6 employees in this program
+      .card
+        .card__container
+          button.card__dropdown.dropdown(type="button")
+            .dropdown__icon
+              include /icons/dropdown
+          h2.card__title Sales Program
+          p.card__subtitle Any Sales employee (not including TVCs)
+          .card__amount
+            span.card__amount-text Contribution amount
+            b.card__amount-sum $150.00 monthly
+          .card__employees-in-program
+            include /icons/sidebar/employees
+            | 5 employees in this program

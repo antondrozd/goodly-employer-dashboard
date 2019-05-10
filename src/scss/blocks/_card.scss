@@ -1,4 +1,5 @@
 .card {
+  position: relative;
   margin-bottom: $dashboard-gap;
   background-color: $white;
   border: 1px solid $gray-100;
@@ -6,13 +7,93 @@
 
   &__container {
     padding: 32px;
+    &--centered {
+      text-align: center;
+
+      .card {
+        &__heading-icon {
+          margin-top: 9px;
+          margin-bottom: 25px;
+
+          svg {
+            * {
+              fill: $brand-dark-color;
+            }
+          }
+        }
+
+        &__title {
+          margin-bottom: 9px;
+        }
+
+        &__subtitle {
+          padding: 0 35px;
+          line-height: 1.5;
+        }
+
+        &__btn {
+          margin-top: 29px;
+        }
+      }
+    }
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: 30px;
+    right: 14px;
   }
 
   &__title {
     margin: 0;
-    font-size: 24px;
+    margin-bottom: 3px;
+    font-size: 22px;
+    line-height: 28px;
     font-weight: $medium;
     color: $brand-dark-color;
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-size: 14px;
+    font-weight: $light;
+    line-height: 1;
+    color: $gray-800;
+  }
+
+  &__amount {
+    display: flex;
+    flex-direction: column;
+    margin-top: 41px;
+    margin-bottom: 67px;
+  }
+
+  &__amount-text {
+    margin-bottom: 16px;
+    font-size: 14px;
+    font-weight: $medium;
+    color: $gray-500;
+  }
+
+  &__amount-sum {
+    font-size: 30px;
+    font-weight: $bold;
+    color: $brand-dark-color;
+  }
+
+  &__employees-in-program {
+    padding-left: 3px;
+    font-size: 14px;
+    font-weight: $medium;
+    color: $gray-500;
+
+    svg {
+      margin-right: 13px;
+
+      * {
+        fill: $gray-500
+      }
+    }
   }
 
   &__graph {
@@ -50,7 +131,7 @@
       &__subtitle {
         font-size: 16px;
         line-height: 23px;
-        color: #4D4D4D;
+        color: #4d4d4d;
         font-weight: 500;
         a {
           color: $brand-color;

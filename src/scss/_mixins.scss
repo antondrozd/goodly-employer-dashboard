@@ -8,3 +8,13 @@
   margin: 0;
   padding: 0;
 }
+
+@mixin icon-btn() {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
