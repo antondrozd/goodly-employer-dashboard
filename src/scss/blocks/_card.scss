@@ -7,37 +7,6 @@
 
   &__container {
     padding: 32px;
-    &--centered {
-      text-align: center;
-
-      .card {
-        &__heading-icon {
-          margin-top: 9px;
-          margin-bottom: 25px;
-
-          svg {
-            * {
-              fill: $brand-dark-color;
-            }
-          }
-        }
-
-        &__title {
-          margin-bottom: 9px;
-          font-size: 24px;
-        }
-
-        &__subtitle {
-          padding: 0 30px;
-          font-size: 16px;
-          line-height: 1.4;
-        }
-
-        &__btn {
-          margin-top: 29px;
-        }
-      }
-    }
   }
 
   &__dropdown {
@@ -120,7 +89,7 @@
       margin-right: 13px;
 
       * {
-        fill: $gray-500
+        fill: $gray-500;
       }
     }
   }
@@ -130,6 +99,69 @@
       margin-top: 52px;
       margin-bottom: 25px;
       margin-left: 21px;
+    }
+  }
+
+  &--centered {
+    .card {
+      &__container {
+        text-align: center;
+      }
+      &__heading-icon {
+        margin-top: 9px;
+        margin-bottom: 25px;
+
+        svg {
+          * {
+            fill: $brand-dark-color;
+          }
+        }
+      }
+
+      &__title {
+        margin-bottom: 9px;
+        font-size: 24px;
+      }
+
+      &__subtitle {
+        padding: 0 30px;
+        font-size: 16px;
+        line-height: 1.4;
+      }
+
+      &__btn {
+        margin-top: 29px;
+      }
+    }
+  }
+
+  &--big {
+    .card {
+      &__container {
+        padding-top: 50px;
+        padding-bottom: 45px;
+      }
+
+      &__heading-icon {
+        margin-top: 3px;
+        margin-bottom: 18px;
+      }
+
+      &__title {
+        margin-bottom: 14px;
+        font-size: 22px;
+      }
+
+      &__subtitle {
+        margin-bottom: 15px;
+        padding: 0 10%;
+        font-size: 14px;
+        font-weight: $regular;
+      }
+
+      &__btn {
+        margin-top: 21px;
+      }
     }
   }
 
@@ -143,6 +175,10 @@
     background-position: center;
 
     .card {
+      &__container {
+        padding-bottom: 29px;
+      }
+
       &__title {
         margin-top: 100px;
         font-size: 32px;

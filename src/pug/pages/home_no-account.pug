@@ -1,0 +1,29 @@
+extends /layouts/dashboard
+include /mixins/sidebar
+
+append head
+  title Home
+
+block sidebar
+  +sidebar('Home')
+
+block dashboard
+  main.main-content.dashboard
+    .dashboard__column
+      .card.card--centered.card--big
+        .card__container
+          .card__heading-icon
+            include /icons/verified
+          h2.card__title Verify Account
+          p.card__subtitle Goodly made two small test deposits to verify your account ending in <b>6789 with STRIPE&nbsp;TEST&nbsp;BANK</b>.
+          p.card__subtitle You should see these deposits in your account in 1&#8209;2&nbsp;business days.
+          button.btn.btn--size-35.card__btn Verify
+    .dashboard__column
+      .card.card--with-bg-img.card--bg-img-1
+        .card__container
+          h2.card__title.card__title How to Set Up Benefit Runs and Programs in Goodly
+          a.btn.btn--size-20.btn--transparent.card__btn Learn more
+      .card.card--with-bg-img.card--bg-img-2
+        .card__container
+          h2.card__title.card__title Adding employees to Goodly is easy
+          a.btn.btn--size-20.btn--transparent.card__btn Learn more
