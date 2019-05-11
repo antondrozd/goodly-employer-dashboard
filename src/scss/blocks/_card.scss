@@ -24,11 +24,13 @@
 
         &__title {
           margin-bottom: 9px;
+          font-size: 24px;
         }
 
         &__subtitle {
-          padding: 0 35px;
-          line-height: 1.5;
+          padding: 0 30px;
+          font-size: 16px;
+          line-height: 1.4;
         }
 
         &__btn {
@@ -156,6 +158,10 @@
 
   &--bg-img-1 {
     background-image: url('/img/benefits-and-runs.jpg');
+  }
+
+  &--bg-img-2 {
+    background-image: url('/img/adding-employees.jpg');
   }
 
   &--setup {
