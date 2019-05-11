@@ -1,0 +1,23 @@
+.badge {
+  position: relative;
+  display: inline-block;
+  padding: 0 8px;
+  font-size: 11px;
+  line-height: 24px;
+  font-weight: $bold;
+  text-transform: uppercase;
+  background-color: $brand-color;
+  color: $white;
+  border-radius: 36px;
+
+  &__text {
+    position: relative;
+    top: 1px;
+  }
+
+  &--transparent {
+    color: $brand-dark-color;
+    background-color: transparent;
+    border: 1px solid $brand-dark-color;
+  }
+}

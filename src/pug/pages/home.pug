@@ -48,9 +48,36 @@ block dashboard
           p.card__light-text Once the employee signs up using this link, they will be enrolled in the primary program and added as an inactive employee.
           a.btn.btn--size-20.card__btn Add Employee
     .dashboard__column
-      .card(style="height: 402px")
+      .card
         .card__container
           h2.card__title.card__title--big Benefit Runs Overview
+          .progress-table.card__progress-table
+            ul.progress-table__list
+              li.progress-table__item
+                .progress-table__icon
+                  include /icons/calendar
+                .progress-table__text-container
+                  h4.progress-table__item-title April Run (Y3YWHGJS)
+                  span.progress-table__item-text <b>$2,328</b> will complete on May 3
+                .progress-table__badge.badge.badge--transparent
+                  span.badge__text UPCOMING
+              li.progress-table__item
+                .progress-table__icon
+                  include /icons/check
+                .progress-table__text-container
+                  h4.progress-table__item-title April Run (Y3YWHGJS)
+                  span.progress-table__item-text <b>$2,328</b> contribution complete on April 15
+                .progress-table__badge.badge
+                  span.badge__text COMPLETE
+              li.progress-table__item
+                .progress-table__icon
+                  include /icons/check
+                .progress-table__text-container
+                  h4.progress-table__item-title March Run (M38NJZGJS)
+                  span.progress-table__item-text <b>$2,328</b> contribution complete on April 3
+                .progress-table__badge.badge
+                  span.badge__text COMPLETE
+          a.link.card__link.card__link--left(href="#") View Benefit Runs
       .card.card--with-bg-img.card--bg-img-1
         .card__container
           h2.card__title.card__title How to Set Up Benefit Runs and Programs in Goodly

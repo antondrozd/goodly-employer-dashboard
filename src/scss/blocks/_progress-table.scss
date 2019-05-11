@@ -1,0 +1,45 @@
+.progress-table {
+  &__list {
+    @include ul-reset();
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding-top: 26px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid $gray-100;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
+  &__icon {
+    padding-right: 16px;
+
+    svg {
+      width: 32px;
+      min-height: 18px;
+    }
+  }
+
+  &__item-title {
+    margin: 0;
+    margin-bottom: 5px;
+    font-weight: $medium;
+    color: $gray-800;
+  }
+
+  &__item-text {
+    font-size: 14px;
+    font-weight: $light;
+    color: $gray-800;
+  }
+
+  &__badge {
+    margin-top: 3px;
+    margin-right: 24px;
+    margin-left: auto;
+  }
+}

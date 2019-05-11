@@ -102,6 +102,19 @@
     }
   }
 
+  &__progress-table {
+    margin: 20px 0;
+  }
+
+  &__link {
+    font-size: 14px;
+
+    &--left {
+      position: relative;
+      left: -8px;
+    }
+  }
+
   &--centered {
     .card {
       &__container {
@@ -173,6 +186,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    border: none;
 
     .card {
       &__container {
