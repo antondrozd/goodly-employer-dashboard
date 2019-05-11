@@ -11,3 +11,11 @@ img {
 b {
   font-weight: $bold;
 }
+
+@media (min-width: 1600px) {
+  body {
+    position: relative;
+    width: 1600px;
+    margin: 0 auto;
+  }
+}

@@ -24,6 +24,10 @@
     }
   }
 
+  &__text-container {
+    padding-right: 25px;
+  }
+
   &__item-title {
     margin: 0;
     margin-bottom: 5px;
@@ -34,6 +38,7 @@
   &__item-text {
     font-size: 14px;
     font-weight: $light;
+    line-height: 1.25;
     color: $gray-800;
   }
 
