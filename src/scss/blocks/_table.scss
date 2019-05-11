@@ -1,0 +1,49 @@
+.table {
+  width: 100%;
+  margin-bottom: 12px;
+
+  &__row {
+    display: grid;
+    border-bottom: 1px solid $gray-100;
+
+    &:hover {
+      background-color: rgba($gray-100, 0.5);
+    }
+
+    &--heading-row {
+      border-top: 1px solid $gray-100;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &__cell {
+    display: flex;
+    align-items: center;
+    padding-top: 22px;
+    padding-bottom: 9px;
+    font-size: 18px;
+    font-weight: $regular;
+    color: $gray-900;
+
+    &--heading {
+      padding-top: 21px;
+      padding-bottom: 18px;
+      font-weight: $bold;
+    }
+  }
+
+  &--employees {
+    .table {
+      &__row {
+        padding-left: 7px;
+        grid-template-columns: 21.6% 11.7% 20.9% 25.1% 15.1% auto;
+      }
+
+      &__cell {
+      }
+    }
+  }
+}

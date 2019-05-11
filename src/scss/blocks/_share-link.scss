@@ -3,9 +3,16 @@
   justify-content: space-between;
   align-items: center;
   padding: 14px;
+  padding-right: 17px;
   border-radius: 6px;
   background-color: rgba($gray-100, 0.3);
   cursor: pointer;
+
+  svg {
+    * {
+      fill: $gray-500;
+    }
+  }
 
   &__adress {
     max-width: 90%;

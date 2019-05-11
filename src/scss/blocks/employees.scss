@@ -1,0 +1,58 @@
+.employees {
+  padding-top: 23px;
+  padding-bottom: 27px;
+
+  &__columns {
+    display: flex;
+  }
+
+  &__column {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 50%;
+
+    &:first-of-type {
+      padding-right: 39px;
+    }
+
+    &:last-of-type {
+      padding-left: 5px;
+    }
+  }
+
+  &__top-right-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 15px;
+  }
+
+  &__brand-dark-text {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: $brand-dark-color;
+  }
+
+  &__share-link {
+    margin-bottom: 13px;
+  }
+
+  &__light-text {
+    margin: 0;
+    font-size: 12px;
+    font-weight: $light;
+    line-height: 1.3;
+    color: $gray-500;
+  }
+
+  &__form-group {
+    flex-grow: 1;
+    margin-bottom: 0;
+  }
+
+  &__textarea {
+    min-height: calc(100% - 28px);
+  }
+}
