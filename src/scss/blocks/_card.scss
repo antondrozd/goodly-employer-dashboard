@@ -244,9 +244,11 @@
         padding: 42px;
       }
 
-      &__top-right-btns-container {
-        top: 31px;
-        right: 38px;
+      &__btns-container {
+        &--top-right {
+          top: 31px;
+          right: 38px;
+        }
       }
 
       &__brand-dark-text {

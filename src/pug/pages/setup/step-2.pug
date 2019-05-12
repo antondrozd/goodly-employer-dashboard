@@ -9,9 +9,9 @@ block setup
   .card.card--setup
     .setup
       +setup-steps({ activeStep: 2 })
-      form.setup__form(method='POST' action='/register')
-        .setup__container
-          .setup__column
+      form.form.setup__form(method='POST' action='/register')
+        .form__container
+          .form__column
             .form-group
               label.form-group__label(for='company') Account Holder
               select#company.form-group__control
@@ -24,21 +24,27 @@ block setup
                 option(value='') 1
                 option(value='') 2
                 option(value='') 3
-            .form-group
+            .form-group.form-group--medium-mb
               label.form-group__label.form-group__label--info(for='accountHolderName') Account Holder Name
               input#accountHolderName.form-group__control(type='text' placeholder='Account Holder Name' name='accountHolderName')
-          .setup__column
+            .form-group
+              b.form-group__label.form-group__label--upload Upload Proof of Ownership
+              .form-group__hint-text Upload a copy of voided check or recent bank statement to verify your&nbsp;account.
+              input#proofOfOwnership.form-group__file(type='file' name='proofOfOwnership')
+              label.form-group__label.form-group__label--file(for='proofOfOwnership') Click here or drag file to upload
+          .form__column
             .form-group
               label.form-group__label(for='routingNumber') Routing Number
               input#routingNumber.form-group__control(type='text', placeholder='Routing Number' name='routingNumber')
             .form-group
               label.form-group__label(for='accountNumber') Account Number
               input#accountNumber.form-group__control(type='text' placeholder='Account Number' name='accountNumber')
-            .form-group
+            .form-group.form-group--medium-mb
               label.form-group__label(for='confirmAccountNumber') Confirm Account Number
               input#confirmAccountNumber.form-group__control(type='text' placeholder='Confirm Account Number' name='confirmAccountNumber')
             .form-group
               input#termsConditions.form-group__checkbox(type='checkbox')
-              label.form-group__label-checkbox(for='termsConditions') I have read the terms and conditions for payment by ACH, and hereby authorize Goodly to deduct payment from my bank account by ACH.
+              label.form-group__label-checkbox.form-group__label-checkbox--small(for='termsConditions') I have read the terms and conditions for payment by ACH, and hereby authorize Goodly to deduct payment from my bank account by ACH.
 
-        a.btn.btn--size-40.setup__btn(href="./step-3") Next
+        .card__btns-container.card__btns-container--bottom-right
+          a.btn.btn--size-40(href="./step-3") Next

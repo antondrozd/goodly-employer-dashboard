@@ -9,16 +9,16 @@ block setup
   .card.card--setup
     .setup
       +setup-steps({ activeStep: 1 })
-      form.setup__form(method='POST' action='/register')
-        .setup__container
-          .setup__column
+      form.form.setup__form.setup__form--large-mb(method='POST' action='/register')
+        .form__container
+          .form__column
             .form-group
               label.form-group__label(for='companyName') Company Name
               input#companyName.form-group__control(type='text', placeholder='Enter name' name='companyName')
             .form-group
               label.form-group__label.form-group__label--info(for='companyLegalName') Company Legal Name
               input#companyLegalName.form-group__control(type='text', placeholder='Enter name' name='companyLegalName')
-          .setup__column
+          .form__column
             .form-group
               label.form-group__label.form-group__label--info(for='tinEin') TIN/EIN
               input#tinEin.form-group__control(type='text', placeholder='xx-xxxxxxx' name='tinEin')
@@ -30,4 +30,5 @@ block setup
                 option(value='') 2
                 option(value='') 3
 
-        a.btn.btn--size-40.setup__btn(href="./step-2") Next
+        .card__btns-container.card__btns-container--bottom-right
+          a.btn.btn--size-40(href="./step-2") Next
