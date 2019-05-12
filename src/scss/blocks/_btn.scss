@@ -56,6 +56,12 @@
     background-color: transparent;
   }
 
+  &--transparent-gray {
+    color: $gray-600;
+    background-color: transparent;
+    border: 1px solid $gray-100;
+  }
+
   &--add-new {
     color: $brand-color;
     text-decoration: none;
