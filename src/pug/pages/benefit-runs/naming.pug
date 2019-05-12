@@ -12,11 +12,11 @@ block dashboard
         .card__top-right-btns-container
           button.btn.btn--transparent-gray.btn--size-30 Refresh
           button.btn.btn--size-40 Next
-        .card__header.card__header--bordered
+        .card__header.card__header--bordered.card__header--edit-heading
           h2.card__title.card__title--big
             a.icon-btn.card__nav-icon(href="/benefit-runs")
               include /icons/navigation-arrow-back
-            a.action-helper(href="./naming") April Run
+            input.card__heading-input(type='text' value="April Run")
         .table.table--benefit-runs-create
           .table__row.table__row--heading-row
             .table__cell.table__cell--heading

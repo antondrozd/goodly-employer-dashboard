@@ -12,6 +12,11 @@ b {
   font-weight: $bold;
 }
 
+a.action-helper {
+  all: unset;
+  cursor: pointer;
+}
+
 @media (min-width: 1600px) {
   body {
     position: relative;

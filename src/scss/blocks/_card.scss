@@ -20,6 +20,30 @@
       padding-bottom: 24px;
       border-bottom: 1px solid $gray-100;
     }
+
+    &--edit-heading {
+      margin-top: -16px;
+      padding-bottom: 19px;
+
+      .card {
+        &__title {
+          margin-bottom: 0;
+        }
+
+        &__nav-icon {
+          margin-right: 14px;
+        }
+
+        &__heading-input {
+          min-width: 400px;
+          padding: 11px 15px;
+          font-size: 24px;
+          color: $brand-dark-color;
+          border: 1px solid $brand-dark-color;
+          border-radius: 6px;
+        }
+      }
+    }
   }
 
   &__nav-icon {
