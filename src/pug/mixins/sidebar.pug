@@ -9,7 +9,7 @@ mixin sidebar(activeLink)
 
         - if (link === activeLink)
           li.sidebar__nav-item.sidebar__nav-item--active
-            a
+            a(href!= route)
               +icon(link)
               | #{link}
         - else

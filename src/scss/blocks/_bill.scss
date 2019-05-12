@@ -1,0 +1,31 @@
+.bill {
+  &__list {
+    @include ul-reset();
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 0;
+    border-bottom: 1px solid $gray-100;
+
+    &:first-of-type {
+      padding-top: 0;
+    }
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
+  &__product {
+    font-weight: $regular;
+    color: $gray-800;
+  }
+
+  &__price {
+    font-weight: $regular;
+    color: $gray-800;
+  }
+}

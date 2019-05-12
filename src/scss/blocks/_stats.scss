@@ -61,4 +61,28 @@
     font-weight: $medium;
     color: $brand-dark-color;
   }
+
+  &--benefit-runs-confirmation {
+    border-top: 1px solid $gray-100;
+    border-bottom: 1px solid $gray-100;
+    background-color: rgba($gray-100, 0.15);
+
+    .stats {
+      &__item {
+        display: flex;
+        flex-direction: column;
+        padding-top: 45px;
+        padding-bottom: 28px;
+      }
+
+      &__text {
+        order: 1;
+        margin-bottom: 0;
+      }
+
+      &__info {
+        margin-bottom: 19px;
+      }
+    }
+  }
 }

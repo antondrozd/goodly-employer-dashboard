@@ -1,0 +1,52 @@
+extends /layouts/dashboard
+include /mixins/sidebar
+
+append head
+  title Benefit Runs | Confirmation
+
+block dashboard
+  +sidebar('Benefit Runs')
+  main.main-content.dashboard
+    .card.card--full-width
+      .card__container
+        .card__btns-container.card__btns-container--bottom-right
+          button.btn.btn--transparent-gray.btn--size-40 Cancel
+          button.btn.btn--size-40 Next
+        .card__header.card__header--bordered
+          h2.card__title.card__title--big
+            a.icon-btn.card__nav-icon(href="./create")
+                include /icons/navigation-arrow-back
+            | April End of Month Contribution
+      .benefit-runs-confirmation
+        h1.benefit-runs-confirmation__title Confirm for processing
+        article.stats.stats--benefit-runs-confirmation
+          ul.stats__list
+            li.stats__item
+              span.stats__text Withdrawn on April 19,2019
+              b.stats__info $2,328
+            li.stats__item
+              span.stats__text Receiving contributions
+              b.stats__info 16 Employees
+            li.stats__item
+              span.stats__text Contribution complete
+              b.stats__info April 29
+        .benefit-runs-confirmation__columns
+          .benefit-runs-confirmation__column
+            h3.benefit-runs-confirmation__column-title Dates
+            ul.benefit-runs-confirmation__steps-list
+              li.benefit-runs-confirmation__step-item Withdraw $2,328 on Monday April 19th, 2019
+              li.benefit-runs-confirmation__step-item Send payment to servicers on Friday April 24, 2019
+              li.benefit-runs-confirmation__step-item Contribution complete on April 29, 2019
+          .benefit-runs-confirmation__column
+            h3.benefit-runs-confirmation__column-title Summary
+            .bill.benefit-runs-confirmation__bill
+              ul.bill__list
+                li.bill__row
+                  span.bill__product Total contribution
+                  span.bill__price $2,200
+                li.bill__row
+                  span.bill__product Fees ($8 x 16)
+                  span.bill__price $128
+                li.bill__row
+                  span.bill__product Total
+                  span.bill__price $2,328

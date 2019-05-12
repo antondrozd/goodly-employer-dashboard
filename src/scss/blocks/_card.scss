@@ -96,12 +96,20 @@
     margin-bottom: 13px;
   }
 
-  &__top-right-btns-container {
-    position: absolute;
-    right: 32px;
-
+  &__btns-container {
     > *:not(:last-child) {
       margin-right: 21px;
+    }
+
+    &--top-right {
+      position: absolute;
+      right: 32px;
+    }
+
+    &--bottom-right {
+      position: absolute;
+      right: 32px;
+      bottom: 32px;
     }
   }
 
