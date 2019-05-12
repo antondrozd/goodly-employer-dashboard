@@ -61,33 +61,4 @@
     background-color: transparent;
     border: 1px solid $gray-100;
   }
-
-  &--add-new {
-    color: $brand-color;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 22px;
-    padding-left: 32px;
-    position: relative;
-    margin-top: 16px;
-    display: inline-block;
-    &:before {
-      content: '';
-      position: absolute;
-      left: 11px;
-      top: 4px;
-      height: 14px;
-      width: 2px;
-      background: $brand-color;
-    }
-    &:after {
-      content: '';
-      position: absolute;
-      left: 5px;
-      top: 10px;
-      height: 2px;
-      width: 14px;
-      background: $brand-color;
-    }
-  }
 }

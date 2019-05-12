@@ -1,0 +1,39 @@
+.alert {
+  width: 100%;
+  background: rgba($brand-color, 0.05);
+  border-radius: 8px;
+
+  &__container {
+    padding: 47px 25px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 6px;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: $bold;
+    color: $brand-dark-color;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    line-height: 23px;
+    letter-spacing: 0.15px;
+    color: $gray-800;
+    font-weight: $light;
+  }
+
+  &--customize-with-programs {
+    background-image: url('/img/customize-with-programs.png');
+    background-repeat: no-repeat;
+    background-size: 9%;
+    background-position: left 25px top 20%;
+
+    .alert {
+      &__container {
+        padding-left: 151px;
+      }
+    }
+  }
+}

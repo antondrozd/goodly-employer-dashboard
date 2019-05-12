@@ -1,5 +1,5 @@
 mixin setup-steps({ activeStep, modifier })
-  - const steps = [1, 2, 3, 4]
+  - const steps = [1, 2, 3, 4, 5]
   - const hrefs = steps.map(step => `./step-${step}`)
   - const classNameWithModifier = modifier ? `setup__steps--${modifier}` : ''
 
@@ -41,6 +41,11 @@ mixin setup-step(index)
       span.steps__text Programs
 
     when 4
+      span.steps__number= index
+        include /icons/check
+      span.steps__text Pay Schedule
+
+    when 5
       span.steps__number= index
         include /icons/check
       span.steps__text Invite Employees

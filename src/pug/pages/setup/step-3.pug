@@ -10,46 +10,45 @@ block setup
     .setup.setup--with-alert
       +setup-steps({ activeStep: 3, modifier: 'small-mb'})
       .setup__container
-        .setup-customize-with-programs
-          img.setup-customize-with-programs__img(src="/img/customize-with-programs.png" width='95' height='135')
-          .setup-customize-with-programs__content
-            .setup-customize-with-programs__title Customize with Programs
-            .setup-customize-with-programs__subtitle Use programs to customize employee contribution based on time, department, etc.
-              a(href='#') Learn more
+        .alert.alert--customize-with-programs.setup__alert
+          .alert__container
+            .alert__title Customize with Programs
+            .alert__subtitle Use programs to customize employee contribution based on time, department, etc. 
+              a.link(href='#') Learn more
       form.setup__form(method='POST' action='/register')
         .setup__container
           .setup__column
-            .form-group
+            .form-group.form-group--large-mb
               label.form-group__label(for='programName') Program Name
               input#programName.form-group__control(type='text', placeholder='Enter name (ex. Marketing Team)' name='programName')
-            .form-group
+            .form-group.form-group--large-mb
               label.form-group__label.form-group__label--info Assistance Type
               input#radio1.form-group__radio(type='radio' name='assistanceType')
               label.form-group__label-radio(for='radio1') Contribution
               input#radio2.form-group__radio(type='radio' name='assistanceType')
               label.form-group__label-radio(for='radio2') Deduction
-            .form-group
+            .form-group.form-group--large-mb
               label.form-group__label(for='description') Description
-              input#description.form-group__control(type='text', placeholder='Description' name='description')
+              input#description.form-group__control(type='text', placeholder='Enter program description' name='description')
 
           .setup__column
-            .form-group
+            .form-group.form-group--large-mb
               label.form-group__label.form-group__label--info(for='payrollCode') Payroll Code
               input#payrollCode.form-group__control(type='text', placeholder='Enter code' name='payrollCode')
-            .form-group
+            .form-group.form-group--large-mb
               label.form-group__label.form-group__label--info Contribution vesting schedule
               .form-group__control--wrapper
-                select.form-group__control(style={'width': '35%'})
+                select.form-group__control
                   option(value='') 1
                   option(value='') 2
                   option(value='') 3
-                select.form-group__control(style={'width': '35%'})
+                select.form-group__control
                   option(value='') 1
                   option(value='') 2
                   option(value='') 3
-                input.form-group__control(type='text' style={'flex': '1'})
-              a.btn--add-new(href='#') Add another level
-            .form-group
+                input.form-group__control(type='text')
+              a.link.link--with-plus.setup__link-with-plus(href='#') Add another level
+            .form-group.form-group--large-mb
               label.form-group__label.form-group__label--info(for='defaultContributionAmount') Default contribution amount
               input#defaultContributionAmount.form-group__control(type='text', placeholder='$0.00' name='defaultContributionAmount')
         a.btn.btn--size-40.setup__btn(href="./step-4") Next

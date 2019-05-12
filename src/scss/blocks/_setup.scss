@@ -40,12 +40,16 @@
     margin-left: auto;
   }
 
+  &__link-with-plus {
+    margin-top: 18px;
+  }
+
   &--main {
     display: flex;
     align-items: center;
     padding-top: 135px;
     padding-right: 48%;
-    padding-bottom: 23.9%;
+    padding-bottom: 24.7%;
     padding-left: 134px;
     background: url('/img/setup-main.png') no-repeat 84.8% 13%;
 
@@ -81,6 +85,10 @@
 
   &--with-alert {
     .setup {
+      &__alert {
+        margin-bottom: 33px;
+      }
+
       &__container {
         padding-right: 42px;
         padding-left: 53px;
@@ -88,6 +96,10 @@
 
       &__column {
         padding: 0 32px;
+      }
+
+      &__btn {
+        margin-top: 22px;
       }
     }
   }
