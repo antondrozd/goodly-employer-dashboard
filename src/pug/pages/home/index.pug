@@ -43,9 +43,10 @@ block dashboard
           h2.card__title.card__title--big Employee Quick Invite
           span.card__brand-dark-text Share Invite Link
           .card__share-link.share-link
-            span.share-link__adress https://goodlyapp.com/join/39nrbdoJaJcm
-            include /icons/copy
-          p.card__light-text Once the employee signs up using this link, they will be enrolled in the primary program and added as an inactive employee.
+            .share-link__container
+              span.share-link__adress https://goodlyapp.com/join/39nrbdoJaJcm
+              include /icons/copy
+            p.share-link__text Once the employee signs up using this link, they will be enrolled in the primary program and added as an inactive employee.
           a.btn.btn--size-20.card__btn Add Employee
     .dashboard__column
       .card

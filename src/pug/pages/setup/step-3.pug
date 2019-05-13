@@ -15,7 +15,7 @@ block setup
             .alert__title Customize with Programs
             .alert__subtitle Use programs to customize employee contribution based on time, department, etc. 
               a.link(href='#') Learn more
-      form.form.form--setup-step-with-alert.setup__form(method='POST' action='/register')
+      form.form.form--setup-wider-form.setup__form(method='POST' action='/register')
         .form__container
           .form__column
             .form-group.form-group--large-mb
@@ -37,12 +37,12 @@ block setup
               input#payrollCode.form-group__control(type='text', placeholder='Enter code' name='payrollCode')
             .form-group.form-group--large-mb
               label.form-group__label.form-group__label--info Contribution vesting schedule
-              .form-group__control--wrapper
-                select.form-group__control
+              .form-group__controls-wrapper
+                select.form-group__control.form-group__control--select
                   option(value='') 1
                   option(value='') 2
                   option(value='') 3
-                select.form-group__control
+                select.form-group__control.form-group__control--select
                   option(value='') 1
                   option(value='') 2
                   option(value='') 3

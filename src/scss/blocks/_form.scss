@@ -22,9 +22,23 @@
     &:last-of-type {
       padding-right: 0 !important;
     }
+
+    &--bordered-left {
+      padding-right: 0 !important;
+      padding-left: 43px !important;
+      border-left: 2px solid $gray-100;
+    }
   }
 
-  &--setup-step-with-alert {
+  &--full-width {
+    .form {
+      &__container {
+        padding: 0;
+      }
+    }
+  }
+
+  &--setup-wider-form {
     .form {
       &__container {
         padding-right: 42px;

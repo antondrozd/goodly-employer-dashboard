@@ -1,0 +1,30 @@
+extends /layouts/dashboard
+include /mixins/sidebar
+
+append head
+  title Bank account
+
+block dashboard
+  +sidebar('Bank Account')
+  main.main-content.dashboard
+    .card.card--full-width.card--standart-paddings
+      .card__container
+        .card__header.card__header--bordered
+          h2.card__title.card__title--pending-verification Bank Account
+          p.card__subtitle Goodly uses this funding account for employee contributions
+        .stats.stats--bank-account
+          ul.stats__list
+            li.stats__item
+              span.stats__icon
+                include /icons/verified
+              b.stats__info Verify Account
+              p.stats__text Goodly made two small test deposits to verify your account ending in 6789 with STRIPE TEST BANK. <br> <br> You should see these deposits in your account in 1-2 business days.
+              button.btn.btn--size-35.stats__btn(type="button") Verify
+            li.stats__item
+              span.stats__icon
+                include /icons/upload
+              b.stats__info Upload Proof of Ownership
+              span.stats__text Upload a copy of voided check or recent bank statement to verify your account.
+              .form-group
+                input#proofOfOwnership.form-group__file(type='file' name='proofOfOwnership')
+                label.form-group__label.form-group__label--file.stats__file-upload-label(for='proofOfOwnership') Click here or drag file to upload

@@ -85,4 +85,66 @@
       }
     }
   }
+
+  &--bank-account {
+    .stats {
+      &__item {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        padding-top: 55px;
+        text-align: center;
+
+        &:last-of-type {
+          padding-left: 30px;
+        }
+
+        &:not(:last-of-type) {
+          &::after {
+            content: '';
+            position: absolute;
+            top: 11%;
+            right: -15px;
+            width: 1px;
+            height: 78%;
+            background-color: $gray-100;
+          }
+        }
+      }
+
+      &__text {
+        max-width: 335px;
+        margin-top: 0;
+        margin-bottom: 11px;
+        padding: 0 20px;
+        line-height: 1.2;
+      }
+
+      &__info {
+        max-width: 385px;
+        margin-bottom: 26px;
+        font-size: 23px;
+      }
+
+      &__icon {
+        border: none;
+        width: 40px;
+        height: 40px;
+
+        svg {
+          * {
+            fill: $brand-dark-color;
+          }
+        }
+      }
+
+      &__btn {
+        margin-top: 26px;
+      }
+
+      &__file-upload-label {
+        padding: 42px 50px;
+      }
+    }
+  }
 }

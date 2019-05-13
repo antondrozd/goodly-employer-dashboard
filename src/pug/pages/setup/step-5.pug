@@ -1,6 +1,48 @@
 extends /layouts/setup
-include /mixins/setup-steps.pug
+
+include /mixins/setup-steps
+
+append head
+  title Goodly Setup | Bank Account
 
 block setup
-    .card.card--setup
-        +setup-steps({ activeStep: 5 })
+  .card.card--setup
+    .setup
+      +setup-steps({ activeStep: 5 })
+      form.form.form--setup-wider-form.setup__form.setup__form--negative-mb(method='POST' action='/register')
+        .form__container
+          .form__column
+            .form-group
+              label.form-group__label(for='employeeName') Employee Name
+              input#employeeName.form-group__control(type='text', placeholder='Enter name' name='employeeName')
+            .form-group
+              label.form-group__label(for='employeeId') Employee ID
+              input#employeeId.form-group__control(type='text', placeholder='Enter ID' name='employeeId')
+            .form-group
+              label.form-group__label(for='workEmail') Work Email
+              input#workEmail.form-group__control(type='email', placeholder='Enter email' name='workEmail')
+            .form-group
+              label.form-group__label(for='program') Program
+              input#program.form-group__control(type='text', placeholder='Select program' name='program')
+            .form-group
+              label.form-group__label(for='companyStartDate') Company Start Date
+              input#companyStartDate.form-group__control(type='text', placeholder='mm/dd/yyyy' name='companyStartDate')
+            .form-group
+              .form-group__controls-wrapper
+                input#activeEmployee.form-group__checkbox(type='checkbox')
+                label.form-group__label-checkbox.form-group__label-checkbox--brand-dark-color(for='activeEmployee') Active employee
+                .btn.btn--size-35.btn--gray Send Invite
+          .form__column.form__column--bordered-left
+            .form-group.form-group--medium-mb
+              b.form-group__label Share Invite Link
+              .share-link.share-link--w-95p
+                .share-link__container
+                  span.share-link__adress https://goodlyapp.com/join/39nrbdoJaJcm
+                  include /icons/copy
+                p.share-link__text.share-link__text--small Once the employee signs up using this link, they will be enrolled in the primary program and added as an inactive employee.
+            .form-group
+              label.form-group__label(for='shareMessage') Edit Share Message
+              textarea#shareMessage.form-group__control.form-group__control--text-light(rows=5) Welcome! We’re inviting you to join us in Goodly to help pay off your student loans faster. https://goodlyapp.com/join/39nrbdoJaJcm
+            .btn.btn--size-35.btn--gray Copy Link
+          .card__btns-container.card__btns-container--bottom-right
+            button.btn.btn--size-40(type="submit" disabled) Done

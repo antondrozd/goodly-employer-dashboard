@@ -1,0 +1,48 @@
+extends /layouts/dashboard
+include /mixins/sidebar
+
+append head
+  title Bank account
+
+block dashboard
+  +sidebar('Bank Account')
+  main.main-content.dashboard
+    .card.card--full-width.card--standart-paddings
+      .card__container
+        .card__header.card__header--bordered
+          h2.card__title Bank Account
+          p.card__subtitle Goodly uses this funding account for employee contributions
+        form.form.form--full-width.card__form(method='POST' action='/register')
+          .form__container
+            .form__column
+              .form-group
+                label.form-group__label(for='accountHolder') Account Holder
+                select#accountHolder.form-group__control.form-group__control--select(name='accountHolder')
+                  option 1
+                  option 2
+                  option 3
+              .form-group
+                label.form-group__label(for='accountType') Account Type
+                select#accountType.form-group__control.form-group__control--select(name='accountType')
+                  option 1
+                  option 2
+                  option 3
+              .form-group
+                label.form-group__label.form-group__label--info(for='accountHolderName') Account Holder Name
+                input#accountHolder.form-group__control(type="text" placeholder="Sarah Porter" name="accountHolderName")
+            .form__column
+              .form-group
+                label.form-group__label(for='routingNumber') Routing Number
+                input#routingNumber.form-group__control(type="text" placeholder="123827738" name="routingNumber")
+              .form-group
+                label.form-group__label(for='accountNumber') Account Number
+                input#accountNumber.form-group__control(type="text" placeholder="993882733" name="accountNumber")
+              .form-group.form-group--medium-mb
+                label.form-group__label(for='confirmAccountNumber') Confirm Account Number
+                input#confirmAccountNumber.form-group__control(type="text" placeholder="993882733" name="confirmAccountNumber")
+              .form-group
+                input#termsConditions.form-group__checkbox(type='checkbox')
+                label.form-group__label-checkbox.form-group__label-checkbox--small(for='termsConditions') I have read the terms and conditions for payment by ACH, and hereby authorize Goodly to deduct payment from my bank account by ACH.
+          .card__btns-container.card__btns-container--bottom-right
+            a.link(href="./") Cancel
+            a.btn.btn--size-40(href="./pending-verification") Save

@@ -1,6 +1,63 @@
 extends /layouts/setup
-include /mixins/setup-steps.pug
+
+include /mixins/setup-steps
+
+append head
+  title Goodly Setup | Bank Account
 
 block setup
-    .card.card--setup
-        +setup-steps({ activeStep: 4 })
+  .card.card--setup
+    .setup
+      +setup-steps({ activeStep: 4 })
+      form.form.form--setup-wider-form.setup__form.setup__form--small-mb(method='POST' action='/register')
+        .form__container
+          .form__column
+            .form-group.form-group--medium-mb
+              label.form-group__label Payroll Interval
+              input#radio1.form-group__radio(type='radio' name='payrollInterval')
+              label.form-group__label-radio(for='radio1') Semi-Monthly
+              input#radio2.form-group__radio(type='radio' name='payrollInterval')
+              label.form-group__label-radio(for='radio2') Monthly
+            .form-group
+              label.form-group__label.form-group__label--info First Pay Day
+              .form-group__controls-wrapper
+                select.form-group__control.form-group__control--select
+                  option(value='') 1
+                  option(value='') 2
+                  option(value='') 3
+                select.form-group__control.form-group__control--select
+                  option(value='') 1
+                  option(value='') 2
+                  option(value='') 3
+            .form-group
+              label.form-group__label.form-group__label--info Second Pay Day
+              .form-group__controls-wrapper
+                select.form-group__control.form-group__control--select
+                  option(value='') 1
+                  option(value='') 2
+                  option(value='') 3
+                select.form-group__control.form-group__control--select
+                  option(value='') 1
+                  option(value='') 2
+                  option(value='') 3
+          .form__column
+            .form-group.form-group--medium-mb
+              label.form-group__label Payroll Adjust
+              input#radio3.form-group__radio(type='radio' name='payrollAdjust')
+              label.form-group__label-radio(for='radio3') Left
+              input#radio4.form-group__radio(type='radio' name='payrollAdjust')
+              label.form-group__label-radio(for='radio4') Right
+            .form-group
+              label.form-group__label.form-group__label--info(for='deducationDay') Deduction Day
+              select#deducationDay.form-group__control.form-group__control--select
+                option(value='') 1
+                option(value='') 2
+                option(value='') 3
+            .form-group
+              label.form-group__label.form-group__label--info Auto Pilot
+              input#radio5.form-group__radio(type='radio' name='autoPilot')
+              label.form-group__label-radio(for='radio5') Yes
+              input#radio6.form-group__radio(type='radio' name='autoPilot')
+              label.form-group__label-radio(for='radio6') No
+        .card__btns-container.card__btns-container--bottom-right
+          a.btn.btn--size-40(href="./step-5") Next

@@ -18,9 +18,10 @@ block dashboard
             .employees__column
               span.employees__brand-dark-text Share Invite Link
               .employees__share-link.share-link
-                span.share-link__adress https://goodlyapp.com/join/39nrbdoJaJcm
-                include /icons/copy
-              p.employees__light-text.employees__light-text--small Once the employee signs up using this link, they will be enrolled in the primary program and added as an inactive employee.
+                .share-link__container
+                  span.share-link__adress https://goodlyapp.com/join/39nrbdoJaJcm
+                  include /icons/copy
+                p.share-link__text.share-link__text--small Once the employee signs up using this link, they will be enrolled in the primary program and added as an inactive employee.
             .employees__column
               span.employees__brand-dark-text Invite page description
               a.link.employees__top-right-link(href="#") Preview
