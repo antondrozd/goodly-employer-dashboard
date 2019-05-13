@@ -1,0 +1,55 @@
+extends /layouts/dashboard
+include /mixins/sidebar
+
+append head
+  title Pay Schedule
+
+block dashboard
+  +sidebar('Pay Schedule')
+  main.main-content.dashboard
+    .card.card--full-width.card--standart-paddings
+      .card__container
+        .card__header.card__header--bordered
+          h2.card__title Pay Schedule
+          p.card__subtitle Employees can deduct part of their paycheck toward student loans. Manage this setting in 
+            a.link(href="/programs") Programs
+        form.form.form--full-width.card__form(method='POST' action='/register')
+          .form__container
+            .form__column
+              .form-group.form-group--controls-new-line
+                label.form-group__label.form-group__label--big Company Payroll Interval
+                input#radio1.form-group__radio(type='radio' checked)
+                label.form-group__label-radio(for='radio1') Contribution
+                input#radio2.form-group__radio(type='radio')
+                label.form-group__label-radio(for='radio2') Deduction
+              .form-group
+                label.form-group__label(for='startDate') Paydays
+                .form-group__controls-wrapper
+                  select.form-group__control.form-group__control--select
+                    option(value='') 1
+                    option(value='') 2
+                    option(value='') 3
+                  span.form-group__text-between-fields and
+                  select.form-group__control.form-group__control--select
+                    option(value='') 1
+                    option(value='') 2
+                    option(value='') 3
+              .form-group.form-group--controls-new-line
+                label.form-group__label.form-group__label--info Payroll adjust
+                input#radio3.form-group__radio(type='radio' checked)
+                label.form-group__label-radio(for='radio3') Left
+                input#radio4.form-group__radio(type='radio')
+                label.form-group__label-radio(for='radio4') Right
+            .form__column
+              .form-group.form-group--small-mb
+                label.form-group__label.form-group__label--big.form-group__label--info Employee Deduction Day
+                select.form-group__control.form-group__control--select
+                  option 1
+                  option 2
+                  option 3
+              .form-group
+                input#autopilot.form-group__checkbox(type='checkbox' name='autopilot')
+                label.form-group__label-checkbox.form-group__label-checkbox--brand-dark-color(for='autopilot') Autopilot
+        .card__btns-container.card__btns-container--bottom-right
+          a.link(href="./") Cancel
+          a.btn.btn--size-40(href="./saved") Save

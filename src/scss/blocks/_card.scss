@@ -118,11 +118,15 @@
   }
 
   &__btns-container {
+    > * {
+      display: inline-block;
+    }
+
     > *:not(:last-child) {
       margin-right: 21px;
     }
 
-    > *:not([class*='btn']) {
+    > .link {
       margin-right: 39px;
     }
 

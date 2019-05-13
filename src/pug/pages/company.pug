@@ -1,0 +1,36 @@
+extends /layouts/dashboard
+include /mixins/sidebar
+
+append head
+  title Company
+
+block dashboard
+  +sidebar('Company')
+  main.main-content.dashboard
+    .card.card--full-width.card--standart-paddings
+      .card__container
+        button.card__dropdown.dropdown(type="button")
+          .dropdown__icon
+            include /icons/dropdown
+        .card__header.card__header--bordered
+          h2.card__title Company
+          p.card__subtitle Legal company information
+        form.form.form--full-width.card__form(method='POST' action='/register')
+          .form__container
+            .form__column
+              .form-group
+                label.form-group__label(for='companyName') Company Name
+                input#companyName.form-group__control(type="text" placeholder="ACME Inc." name="companyName")
+              .form-group
+                label.form-group__label.form-group__label--info(for='companyLegalName') Company Legal Name
+                input#companyLegalName.form-group__control(type="text" placeholder="ACME Inc." name="companyLegalName")
+            .form__column
+              .form-group
+                label.form-group__label.form-group__label--info(for='TINEIN') TIN/EIN
+                input#TINEIN.form-group__control(type="text" placeholder="12-37287338" name="TINEIN")
+              .form-group
+                label.form-group__label(for='businessType') Business Type
+                select#businessType.form-group__control(name="businessType")
+                  option 1
+                  option 2
+                  option 3

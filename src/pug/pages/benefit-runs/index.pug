@@ -9,4 +9,72 @@ block dashboard
   main.main-content.dashboard
     .card.card--full-width
       .card__container
-        
+        .card__btns-container.card__btns-container--top-right
+          .form-group
+            select.form-group__control.form-group__control--btn-select
+              option Calendar view
+              option List view
+          a.btn.btn--size-35(href="./create") Create Run
+        .card__header.card__header--bordered
+          h2.card__title.card__title--big.card__title--info Benefit Runs
+        .benefit-runs-calendar
+          .benefit-runs-calendar__header
+            h2.benefit-runs-calendar__title April 2019
+            .benefit-runs-calendar__arrows-container
+              span.benefit-runs-calendar__arrow
+                button.icon-btn(type="button")
+                  include /icons/expand-left
+              span.benefit-runs-calendar__arrow.benefit-runs-calendar__arrow--right
+                button.icon-btn(type="button")
+                  include /icons/expand-left
+          .benefit-runs-calendar__body
+            .benefit-runs-calendar__day-item
+              span.benefit-runs-calendar__day-name Mon
+              span.benefit-runs-calendar__day-number 1
+            .benefit-runs-calendar__day-item
+              span.benefit-runs-calendar__day-name Tues
+              span.benefit-runs-calendar__day-number 2
+            .benefit-runs-calendar__day-item
+              span.benefit-runs-calendar__day-name Wed
+              span.benefit-runs-calendar__day-number 3
+            .benefit-runs-calendar__day-item
+              span.benefit-runs-calendar__day-name Thurs
+              span.benefit-runs-calendar__day-number 4
+              span.btn.btn--calendar-btn.btn--brand-dark Submitted for processing
+            .benefit-runs-calendar__day-item
+              span.benefit-runs-calendar__day-name Fri
+              span.benefit-runs-calendar__day-number 5
+            .benefit-runs-calendar__day-item
+              span.benefit-runs-calendar__day-number 8
+            .benefit-runs-calendar__day-item
+              span.benefit-runs-calendar__day-number 9
+            .benefit-runs-calendar__day-item
+              span.benefit-runs-calendar__day-number 10
+              span.btn.btn--calendar-btn.btn--green Submitted for processing
+            .benefit-runs-calendar__day-item
+              span.benefit-runs-calendar__day-number 11
+            .benefit-runs-calendar__day-item
+              span.benefit-runs-calendar__day-number 12
+            .benefit-runs-calendar__day-item
+              span.benefit-runs-calendar__day-number 15
+            .benefit-runs-calendar__day-item
+              span.benefit-runs-calendar__day-number 16
+            .benefit-runs-calendar__day-item
+              span.benefit-runs-calendar__day-number 17
+            .benefit-runs-calendar__day-item
+              span.benefit-runs-calendar__day-number 18
+              span.btn.btn--calendar-btn.btn--brand-dark Submitted for processing
+            .benefit-runs-calendar__day-item
+              span.benefit-runs-calendar__day-number 19
+            .benefit-runs-calendar__day-item
+              span.benefit-runs-calendar__day-number 22
+            .benefit-runs-calendar__day-item
+              span.benefit-runs-calendar__day-number 23
+            .benefit-runs-calendar__day-item
+              span.benefit-runs-calendar__day-number 24
+              span.btn.btn--calendar-btn.btn--dark-gray Expected completion
+            .benefit-runs-calendar__day-item
+              span.benefit-runs-calendar__day-number 25
+            .benefit-runs-calendar__day-item
+              span.benefit-runs-calendar__day-number 26
+          

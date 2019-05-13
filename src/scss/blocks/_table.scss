@@ -90,7 +90,7 @@
 
     .table {
       &__row {
-        grid-template-columns: 5.5% 45.6% 41.2% auto;
+        grid-template-columns: 5.5% 45.6% minmax(120px, 41.2%) auto;
 
         &--heading-row {
           border-top: none;

@@ -1,0 +1,79 @@
+.benefit-runs-calendar {
+  margin-bottom: 31px;
+  padding-top: 25px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 21px;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: $light;
+    color: $brand-dark-color;
+  }
+
+  &__arrows-container {
+    margin-right: 29px;
+  }
+
+  &__arrow {
+    svg {
+      width: 20px;
+      height: 20px;
+
+      * {
+        fill: $gray-600;
+      }
+    }
+
+    &--right {
+      margin-left: 15px;
+
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 178px;
+    grid-auto-rows: 161px;
+  }
+
+  &__day-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+    border-bottom: 1px solid $gray-100;
+    border-right: 1px solid $gray-100;
+
+    &:nth-child(-n + 5) {
+      border-top: 1px solid $gray-100;
+    }
+
+    &:nth-child(5n) {
+      border-right: none;
+    }
+  }
+
+  &__day-name {
+    display: block;
+    font-size: 14px;
+    color: $gray-600;
+  }
+
+  &__day-number {
+    display: block;
+    margin-top: 11px;
+    font-size: 14px;
+    color: $gray-600;
+  }
+}

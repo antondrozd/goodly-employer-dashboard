@@ -14,6 +14,19 @@
     }
   }
 
+  &__checkbox:disabled + &__label-checkbox {
+    &:after {
+      border-color: $gray-600;
+    }
+
+    &:before {
+      content: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 0H2C0.9 0 0 0.9 0 2V16C0 17.1 0.9 18 2 18H16C17.1 18 18 17.1 18 16V2C18 0.9 17.1 0 16 0ZM16 16H2V2H16V16ZM13.58 4.58L14.99 6L6.99 14L2.99 10.01L4.41 8.6L6.99 11.17L13.58 4.58Z' fill='%23808080'/%3e%3c/svg%3e ");
+      position: absolute;
+      left: 0;
+      top: 2px;
+    }
+  }
+
   &__label-checkbox {
     font-size: 16px;
     color: $gray-600;
@@ -86,6 +99,11 @@
       border-radius: 8px;
       cursor: pointer;
     }
+
+    &--big {
+      font-size: 22px;
+      margin-bottom: 29px;
+    }
   }
 
   &__file {
@@ -116,9 +134,29 @@
       padding-right: 70px;
     }
 
+    &--btn-select {
+      padding: 8px 15px;
+      font-size: 16px;
+      color: $gray-600;
+    }
+
     &--text-light {
       font-weight: $light;
       line-height: 28px;
+    }
+
+    &--calendar {
+      position: relative;
+
+      &::after {
+        content: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='22' viewBox='0 0 20 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M18 2H17V0H15V2H5V0H3V2H2C0.9 2 0 2.9 0 4V20C0 21.1 0.9 22 2 22H18C19.1 22 20 21.1 20 20V4C20 2.9 19.1 2 18 2ZM18 20H2V9H18V20ZM2 7H18V4H2V7Z' fill='%23808080'/%3e%3c/svg%3e ");
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 24px;
+        height: 24px;
+        transform: translate(-50%);
+      }
     }
   }
 
@@ -127,11 +165,14 @@
     align-items: center;
     justify-content: space-between;
 
-    .form-group {
-      &__control:not(:last-child) {
-        margin-right: 13px;
-      }
+    > *:not(:last-child) {
+      margin-right: 13px;
     }
+  }
+
+  &__text-between-fields {
+    font-size: 18px;
+    color: $gray-400;
   }
 
   &__radio {
@@ -148,6 +189,16 @@
       height: 10px;
       background: $brand-dark-color;
       border-radius: 50%;
+    }
+  }
+
+  &__radio:disabled + &__label-radio {
+    &:after {
+      background: $gray-600;
+    }
+
+    &:before {
+      border-color: $gray-600;
     }
   }
 
@@ -180,12 +231,24 @@
     color: $gray-800;
   }
 
+  &--small-mb {
+    margin-bottom: 18px;
+  }
+
   &--medium-mb {
     margin-bottom: 36px;
   }
 
   &--large-mb {
     margin-bottom: 45px;
+  }
+
+  &--controls-new-line {
+    flex-direction: column;
+
+    > *[class*='label'] {
+      display: block;
+    }
   }
 
   // &--select {
