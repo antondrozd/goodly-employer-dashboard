@@ -1,5 +1,5 @@
 mixin sidebar(activeLink)
-  - const links = ['Home', 'Benefit Runs', 'Programs', 'Employees']
+  - const links = ['Home', 'Benefit Runs', 'Programs', 'Employees', 'Reports', 'Settings']
   - const routes = links.map(link => `/${link.replace(' ', '-').toLowerCase()}`)
 
   nav.sidebar
@@ -28,3 +28,7 @@ mixin icon(name)
       include /icons/sidebar/programs
     when 'Employees'
       include /icons/sidebar/employees
+    when 'Reports'
+      include /icons/sidebar/report
+    when 'Settings'
+      include /icons/sidebar/settings
