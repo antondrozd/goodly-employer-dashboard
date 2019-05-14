@@ -1,0 +1,37 @@
+.accordion {
+  position: relative;
+  padding-right: 0;
+  border-top: 1px solid $gray-100;
+  border-bottom: 1px solid $gray-100;
+  cursor: pointer;
+
+  &__panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s easy;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 19px;
+    left: 206px;
+
+    svg {
+      transition: all 0.3s easy;
+    }
+  }
+
+  &--active {
+    .accordion {
+      &__panel {
+        max-height: 500px;
+      }
+
+      &__icon {
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}

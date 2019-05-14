@@ -58,14 +58,8 @@ function accordion() {
 
   accordion.forEach(acc => {
     acc.addEventListener('click', () => {
-      acc.classList.toggle('accordion--active')
-
       const panel = acc.querySelector('.accordion__panel')
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + 'px'
-      }
+      acc.classList.toggle('accordion--active')
     })
   })
 }

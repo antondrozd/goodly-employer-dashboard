@@ -46,5 +46,26 @@
         }
       }
     }
+
+    &--accordion {
+      .sidebar {
+        &__nav-item {
+          padding-left: 39px;
+          a {
+            padding-top: 10px;
+            padding-bottom: 10px;
+          }
+        }
+      }
+
+      &:first-of-type {
+        margin-top: 16px;
+        padding-top: 12px;
+      }
+
+      &:nth-child(n + 2) {
+        border-top: none;
+      }
+    }
   }
 }

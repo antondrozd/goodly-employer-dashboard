@@ -1,22 +1,51 @@
 mixin sidebar(activeLink)
-  - const links = ['Home', 'Benefit Runs', 'Programs', 'Employees', 'Reports', 'Settings']
-  - const routes = links.map(link => `/${link.replace(' ', '-').toLowerCase()}`)
+  - const links = ['Home', 'Benefit Runs', 'Programs', 'Employees']
+  - const accordions = [{title: 'Reports', links: ['Contribution', 'ADP']}, {title: 'Settings', links: ['Bank Account', 'Company', 'Pay Schedule', 'Profile', 'Integrations']}]
+  - const accordionsLinks = accordions.map(item => item.links).reduce((prev, current) => prev.concat(current))
+  - const allLinks = [...links, ...accordionsLinks]
+  - const routes = allLinks.map(link => `/${link.replace(' ', '-').toLowerCase()}`)
 
   nav.sidebar
-    ul.sidebar__nav-list
+    .sidebar__nav-list
       each link, index in links
         - const route = routes[index]
 
         - if (link === activeLink)
-          li.sidebar__nav-item.sidebar__nav-item--active
+          .sidebar__nav-item.sidebar__nav-item--active
             a(href!= route)
               +icon(link)
               | #{link}
         - else
-          li.sidebar__nav-item
+          .sidebar__nav-item
             a(href!= route)
               +icon(link)
               | #{link}
+
+      .sidebar__accordions        
+        each accordion, accordionIndex in accordions
+          .sidebar__nav-item.sidebar__nav-item--accordion.accordion
+            .accordion__icon
+              include /icons/expand
+            a
+              +icon(accordion.title)
+              | #{accordion.title}
+            .accordion__panel
+              each link, index in accordion.links
+                - const route = routes[index + links.length + accordionIndex + 1]
+                - console.log(accordionIndex)
+
+                - if (link === activeLink)
+                  .sidebar__nav-item.sidebar__nav-item--active
+                    a(href!= route)
+                      +icon(link)
+                      | #{link}
+                - else
+                  .sidebar__nav-item
+                    a(href!= route)
+                      +icon(link)
+                      | #{link}
+
+
 
 mixin icon(name)
   case name
