@@ -2,7 +2,9 @@ html(lang="en")
   block head
     include /blocks/head
   body
-    include /blocks/header
+    block header
+      include /mixins/header
+      +header({})
 
     block sidebar
     

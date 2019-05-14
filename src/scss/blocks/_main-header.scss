@@ -9,7 +9,7 @@
   margin-bottom: 32px;
   background-color: $white;
   border-bottom: 1px solid $gray-100;
-  
+
   &__wrapper {
     @include container();
     display: flex;
@@ -22,19 +22,154 @@
     align-items: center;
     margin-right: 36px;
   }
-  
+
+  &__user-info {
+    display: flex;
+    align-items: center;
+    margin-left: 37px;
+  }
+
   &__user-photo {
     width: 32px;
     height: 32px;
-    margin-left: 35px;
+  }
+
+  &__account-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-right: 21px;
+    padding-left: 7px;
+    cursor: pointer;
+
+    &:hover {
+      &::after {
+        content: '';
+        position: absolute;
+        top: 30px;
+        width: 90%;
+        height: 30px;
+      }
+
+      .main-header {
+        &__account-menu {
+          display: block;
+        }
+      }
+    }
   }
 
   &__user-name {
-    padding-right: 21px;
-    padding-left: 12px;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: $regular;
     font-style: normal;
     color: $gray-800;
+  }
+
+  &__user-account {
+    margin-top: 2px;
+    font-size: 13px;
+    font-weight: $regular;
+    color: $gray-600;
+  }
+
+  &__expand-icon {
+    margin-right: -5px;
+    margin-left: 5px;
+  }
+
+  &__account-menu {
+    position: absolute;
+    top: 54px;
+    left: -33px;
+    display: none;
+    padding-top: 9px;
+    padding-bottom: 6px;
+    padding-left: 8px;
+    width: 166px;
+    background-color: $white;
+    border: 1px solid $gray-100;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 5;
+
+    &:hover {
+      display: block;
+    }
+  }
+
+  &__account-menu-group {
+    position: relative;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding-top: 5px;
+    padding-bottom: 7px;
+
+    .main-header {
+      &__account-menu-item {
+        font-size: 12px;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 98%;
+      top: 0;
+      left: 0;
+      background-color: $gray-100;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 98%;
+      bottom: 0;
+      left: 0;
+      background-color: $gray-100;
+    }
+  }
+
+  &__account-menu-group-title {
+    padding-top: 8px;
+    padding-bottom: 9px;
+    padding-left: 6px;
+    font-size: 9px;
+    text-transform: uppercase;
+    color: $gray-400;
+  }
+
+  &__account-menu-item {
+    display: block;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: $regular;
+    text-decoration: none;
+    color: $gray-800;
+    padding-top: 5px;
+    padding-bottom: 6px;
+    padding-left: 6px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+    &:hover {
+      background-color: $gray-100;
+    }
+
+    &--active {
+      position: relative;
+      color: $brand-color;
+      background-color: rgba($brand-color, 0.1);
+
+      &::after {
+        content: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='10' viewBox='0 0 12 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3.86339 7.58336L1.08339 4.80336L0.136719 5.74336L3.86339 9.47003L11.8634 1.47003L10.9234 0.530029L3.86339 7.58336Z' fill='%2313C8F5'/%3e%3c/svg%3e ");
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
   }
 }

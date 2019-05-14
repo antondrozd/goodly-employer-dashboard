@@ -1,0 +1,25 @@
+mixin header({ multipleAccounts, account })
+  header.main-header
+    .main-header__wrapper
+      .main-header__logo
+        include /blocks/logo
+      .main-header__user-block
+        button.icon-btn.main-header__bell-icon
+          include /icons/bell
+        .main-header__user-info
+          img.main-header__user-photo(src="/img/user.jpg", alt="user")
+          .main-header__account-info
+            span.main-header__user-name Sarah Porter
+              span.main-header__expand-icon
+                include /icons/expand
+            - if (multipleAccounts)
+              span.main-header__user-account= account
+            .main-header__account-menu
+              a.main-header__account-menu-item(href="#") Profile
+              a.main-header__account-menu-item(href="#") Audit logs
+              .main-header__account-menu-group
+                .main-header__account-menu-group-title Accounts
+                a.main-header__account-menu-item.main-header__account-menu-item--active(href="#") ACME Inc.
+                a.main-header__account-menu-item(href="#") Deluxe Studio LLC
+                a.main-header__account-menu-item(href="#") Add Account
+              a.main-header__account-menu-item(href="#") Logout

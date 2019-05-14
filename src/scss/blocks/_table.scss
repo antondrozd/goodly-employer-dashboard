@@ -42,6 +42,13 @@
         }
       }
     }
+
+    &--dropdown {
+      > * {
+        position: relative;
+        top: -6px;
+      }
+    }
   }
 
   &__cell-icon {
