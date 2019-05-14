@@ -1,0 +1,27 @@
+extends /layouts/dashboard
+include /mixins/sidebar
+
+append head
+  title Integrations
+
+block dashboard
+  +sidebar('Integrations')
+  main.main-content.dashboard
+    .card.card--full-width.card--standart-paddings
+      .card__container
+        .card__header.card__header--bordered
+            h2.card__title Auto Sync Integrations
+            p.card__subtitle Automatically sync your employees from third-party services to Goodly
+        .integrations.card__integrations
+          .card.card--integration
+            .card__container
+              .card__logo.card__logo--google
+                img(src="/img/google-logo.png" alt="google")
+              .card__subtitle Sync with G Suite
+              .btn.btn--size-25.card__btn Connect
+          .card.card--integration
+            .card__container
+              .card__logo.card__logo--rippling
+                img(src="/img/rippling-logo.png" alt="rippling")
+              .card__subtitle Sync with Rippling
+              .btn.btn--size-25.card__btn Connect

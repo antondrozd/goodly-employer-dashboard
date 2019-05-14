@@ -207,11 +207,59 @@
     margin-bottom: 66px !important;
   }
 
+  &__integrations {
+    margin-top: 47px;
+  }
+
+  &--integration {
+    min-height: 209px;
+    margin-bottom: 0;
+
+    .card {
+      &__container {
+        text-align: center;
+      }
+
+      &__logo {
+        margin-bottom: 36px;
+
+        &--google {
+          margin-top: -21px;
+          margin-bottom: 10px;
+
+          img {
+            width: 204px;
+          }
+        }
+
+        &--rippling {
+          margin-top: 8px;
+
+          img {
+            position: relative;
+            left: -5px;
+            width: 181px;
+          }
+        }
+      }
+
+      &__subtitle {
+        font-size: 18px;
+        color: $gray-600;
+      }
+
+      &__btn {
+        margin-top: 52px;
+      }
+    }
+  }
+
   &--centered {
     .card {
       &__container {
         text-align: center;
       }
+
       &__heading-icon {
         margin-top: 9px;
         margin-bottom: 25px;

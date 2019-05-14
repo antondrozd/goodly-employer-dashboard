@@ -58,14 +58,18 @@ function clean() {
 
 function copy() {
   return gulp
-    .src(['src/fonts/**/*.{woff,woff2,ttf}', 'src/js/**', 'src/img/**/*.svg'], {
+    .src(['src/fonts/**/*.{woff,woff2,ttf}', 'src/img/**/*.svg'], {
       base: 'src'
     })
     .pipe(gulp.dest('build'))
 }
 
+function js() {
+  return gulp.src('src/js/**/*.js').pipe(gulp.dest('build/js'))
+}
+
 function build(done) {
-  gulp.series(clean, copy, images, views, style, seriesDone => {
+  gulp.series(clean, copy, js, images, views, style, seriesDone => {
     seriesDone()
     done()
   })()
@@ -77,6 +81,7 @@ gulp.task('images', images)
 gulp.task('clean', clean)
 gulp.task('copy', copy)
 gulp.task('build', build)
+gulp.task('js', js)
 
 gulp.task('serve', () => {
   server.init({
@@ -94,5 +99,5 @@ gulp.task('serve', () => {
 
   gulp.watch('src/scss/**/*.scss', style)
   gulp.watch('src/pug/**/*.pug', views)
-  gulp.watch('src/js/**/*.js', copy)
+  gulp.watch('src/js/**/*.js', js)
 })
