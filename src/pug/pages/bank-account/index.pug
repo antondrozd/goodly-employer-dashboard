@@ -12,6 +12,9 @@ block dashboard
         button.card__dropdown.dropdown(type="button")
           .dropdown__icon
             include /icons/dropdown
+          .dropdown__list
+            a.dropdown__item(href="./edit") Edit Bank Account
+            a.dropdown__item(href="#") Delete Bank Account
         .card__header.card__header--bordered
           h2.card__title.card__title--verified Bank Account
           p.card__subtitle Goodly uses this funding account for employee contributions

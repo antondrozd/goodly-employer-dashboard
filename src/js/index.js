@@ -1,55 +1,28 @@
-// // $(document).ready(function() {
-// //   $('select').niceSelect();
-// // });
+$(document).ready(() => {
+  dropdowns()
+})
 
-// window.onload = function () {
-//   $('select').each(function(){
-//       var $this = $(this), numberOfOptions = $(this).children('option').length;
+function dropdowns() {
+  const dropdowns = Array.prototype.slice.call(
+    document.querySelectorAll('.dropdown')
+  )
 
-//       $this.addClass('select-hidden');
-//       $this.wrap('<div class="select"></div>');
-//       $this.after('<div class="select-styled"></div>');
+  dropdowns.forEach(dropdown => {
+    const list = dropdown.querySelector('.dropdown__list')
 
-//       var $styledSelect = $this.next('div.select-styled');
-//       $styledSelect.text($this.children('option').eq(0).text());
+    if (list) {
+      dropdown.addEventListener('click', () => {
+        list.classList.add('dropdown__list--show')
 
-//       var $list = $('<ul />', {
-//           'class': 'select-options'
-//       }).insertAfter($styledSelect);
+        function onClose(event) {
+          if (!dropdown.contains(event.target)) {
+            list.classList.remove('dropdown__list--show')
+            window.removeEventListener('click', onClose)
+          }
+        }
 
-//       for (var i = 0; i < numberOfOptions; i++) {
-//           $('<li />', {
-//               text: $this.children('option').eq(i).text(),
-//               rel: $this.children('option').eq(i).val(),
-//               class: $this.children('option').eq(i)[0].classList.value,
-//           }).appendTo($list);
-//       }
-
-//       var $listItems = $list.children('li');
-
-//       $styledSelect.click(function(e) {
-//           e.stopPropagation();
-//           $('div.select-styled.active').not(this).each(function(){
-//               $(this).removeClass('active').next('ul.select-options').hide();
-//           });
-//           $(this).toggleClass('active').next('ul.select-options').toggle();
-//       });
-
-//       $listItems.click(function(e) {
-//           e.stopPropagation();
-//           if ($(this)[0].classList.value !== 'addNew') {
-//               $styledSelect.text($(this).text()).removeClass('active');
-//               $this.val($(this).attr('rel'));
-//               $list.hide();
-//           } else {
-//               console.log('Add new Event')
-//           }
-//       });
-
-//       $(document).click(function() {
-//           $styledSelect.removeClass('active');
-//           $list.hide();
-//       });
-
-//   });
-// };
+        window.addEventListener('click', onClose)
+      })
+    }
+  })
+}

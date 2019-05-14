@@ -4,15 +4,16 @@
   width: max-content;
   padding-top: 9px;
   padding-bottom: 9px;
+  font-family: $main-font;
   font-size: 16px;
   line-height: 23px;
   text-align: center;
+  text-decoration: none;
   color: $white;
   background-color: $brand-color;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  text-decoration: none;
 
   &[disabled], &:disabled {
     opacity: .5;

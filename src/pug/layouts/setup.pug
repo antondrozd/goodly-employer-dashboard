@@ -2,7 +2,8 @@ html(lang="en")
   block head
     include /blocks/head
   body
-    include /blocks/header
+    include /mixins/header
+    +header({})
     main.main-content.main-content--setup-page
       block setup
-    include /blocks/scripts
+  include /blocks/scripts

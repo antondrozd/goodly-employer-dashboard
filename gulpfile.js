@@ -94,4 +94,5 @@ gulp.task('serve', () => {
 
   gulp.watch('src/scss/**/*.scss', style)
   gulp.watch('src/pug/**/*.pug', views)
+  gulp.watch('src/js/**/*.js', copy)
 })
