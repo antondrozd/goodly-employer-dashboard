@@ -1,0 +1,41 @@
+extends /layouts/dashboard
+include /mixins/sidebar
+
+append head
+  title Profile
+
+block dashboard
+  +sidebar('Pay Schedule')
+  main.main-content.dashboard
+    .card.card--full-width.card--standart-paddings
+      .card__container
+        button.card__dropdown.dropdown(type="button")
+          .dropdown__icon
+            include /icons/dropdown
+          .dropdown__list
+            a.dropdown__item(href="#") Option 1
+            a.dropdown__item(href="#") Option 2
+        .card__header.card__header--bordered
+          h2.card__title Profile
+          p.card__subtitle Your account information
+        form.form.form--full-width.card__form(method='POST' action='/')
+          .form__container
+            .form__column
+              .form-group
+                label.form-group__label(for='email') Email
+                input#email.form-group__control(type='text', placeholder='Email' name='email')
+              .form-group
+                label.form-group__label(for='name') Name
+                input#name.form-group__control(type='text', placeholder='Name' name='name')
+              .form-group
+                label.form-group__label(for='birthday') Birthday
+                input#birthday.form-group__control(type='text', placeholder='07/02/1985' name='birthday')
+            .form__column.form__column--text-center
+              .form-group
+                b.form-group__label Profile photo
+                input#proofOfOwnership.form-group__file(type='file' name='proofOfOwnership')
+                label.form-group__label.form-group__label--photo(for='proofOfOwnership')
+                  img(src="/img/photo.png" alt="photo")
+                  span.link Change
+          .card__btns-container.card__btns-container--bottom-right
+            button.btn.btn--size-40 Save
