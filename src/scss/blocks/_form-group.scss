@@ -257,89 +257,82 @@
       display: block;
     }
   }
+}
 
-  // &--select {
-  //   position: relative;
-  //   z-index: 99;
-
-  //   select {
-  //     display: none;
-  //   }
-
-  //   .select-styled {
-  //     font-weight: 500;
-  //     position: relative;
-  //     background-color: #fff;
-  //     border: 1px solid #dadada;
-  //     border-radius: 8px;
-  //     height: auto;
-  //     color: #4d4d4d;
-  //     font-size: 18px;
-  //     padding: 14px 20px 9px;
-
-  //     &.active {
-  //       border-radius: 8px 8px 0 0;
-  //     }
-
-  //     &:before {
-  //       position: absolute;
-  //       content: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.04041 9.5L11.9856 14.5L16.9307 9.5H7.04041Z' fill='black' fill-opacity='0.54'/%3E%3C/svg%3E%0A");
-  //       right: 11px;
-  //       top: 16px;
-  //     }
-  //   }
-
-  //   .select-options {
-  //     display: none;
-  //     position: absolute;
-  //     top: 51px;
-  //     left: 0;
-  //     right: 0;
-  //     background: #ffffff;
-  //     font-size: 18px;
-  //     line-height: normal;
-  //     color: #808080;
-  //     padding: 10px 18px;
-  //     list-style: none;
-  //     border: 1px solid #cccccc;
-  //     box-sizing: border-box;
-  //     border-radius: 0 0 8px 8px;
-
-  //     li {
-  //       cursor: pointer;
-  //       line-height: 2.1;
-
-  //       &.addNew {
-  //         border-top: 1px solid #eaeaea;
-  //         font-size: 18px;
-  //         line-height: normal;
-  //         color: #13c8f5;
-  //         position: relative;
-  //         padding-left: 32px;
-  //         margin-top: 7px;
-  //         padding-top: 12px;
-  //         padding-bottom: 6px;
-
-  //         &:before {
-  //           content: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z' fill='%2313C8F5'/%3E%3C/svg%3E%0A");
-  //           position: absolute;
-  //           left: -1px;
-  //           top: 11px;
-  //         }
-  //       }
-  //     }
-  //   }
-
-  //   .top {
-  //     + .select-styled.active {
-  //       border-radius: 0 0 8px 8px;
-  //     }
-
-  //     + div + ul {
-  //       bottom: 35px;
-  //       top: inherit;
-  //       border-radius: 8px 8px 0 0;
-  //     }
-  //   }
-  // }
+.select {
+  position: relative;
+  z-index: 99;
+}
+.select select {
+  display: none;
+}
+.select .select-styled {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #dadada;
+  border-radius: 8px;
+  height: auto;
+  color: #4d4d4d;
+  color: $gray-600;
+  font-size: 18px;
+  padding: 14px 17px;
+  line-height: 22px;
+  min-width: 136px;
+}
+.select .select-styled.active {
+  border-radius: 8px 8px 0 0;
+}
+.select .select-styled:before {
+  position: absolute;
+  content: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.04041 9.5L11.9856 14.5L16.9307 9.5H7.04041Z' fill='black' fill-opacity='0.54'/%3E%3C/svg%3E%0A");
+  right: 11px;
+  top: 16px;
+}
+.select .select-options {
+  display: none;
+  position: absolute;
+  top: 46px;
+  margin: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  font-size: 18px;
+  line-height: normal;
+  color: #808080;
+  padding: 10px 18px;
+  list-style: none;
+  border: 1px solid #ccc;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 0 0 8px 8px;
+  z-index: 100;
+}
+.select .select-options li {
+  cursor: pointer;
+  line-height: 2.1;
+}
+.select .select-options li.addNew {
+  border-top: 1px solid #eaeaea;
+  font-size: 18px;
+  line-height: normal;
+  color: #13c8f5;
+  position: relative;
+  padding-left: 32px;
+  margin-top: 7px;
+  padding-top: 12px;
+  padding-bottom: 6px;
+}
+.select .select-options li.addNew:before {
+  content: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z' fill='%2313C8F5'/%3E%3C/svg%3E%0A");
+  position: absolute;
+  left: -1px;
+  top: 11px;
+}
+.select .top + .select-styled.active {
+  border-radius: 0 0 8px 8px;
+}
+.select .top + div + ul {
+  bottom: 35px;
+  top: inherit;
+  border-radius: 8px 8px 0 0;
 }
