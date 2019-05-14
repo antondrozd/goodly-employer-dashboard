@@ -14,7 +14,7 @@ block dashboard
             include /icons/featured-play-list
           h2.card__title Customize with Programs
           p.card__subtitle Use programs to customize employee contribution based on time, department, and more.
-          button.btn.btn--size-25.card__btn Add program
+          button.btn.btn--size-25.card__btn(data-toggle="modal" data-target="addProgram") Add program
       .card
         .card__container
           button.card__dropdown.dropdown(type="button")
@@ -84,3 +84,41 @@ block dashboard
           .card__employees-in-program
             include /icons/sidebar/employees
             | 5 employees in this program
+  #addProgram.modal.card
+    h3.card__title.modal__title Add Program
+    button.modal__close-btn.icon-btn
+      include /icons/close
+    form.modal__form
+      .form-group
+        label.form-group__label(for='programName') Program Name
+        input#programName.form-group__control(type='text', placeholder='Enter name (ex. Marketing Team)' name='programName')
+      .form-group
+        label.form-group__label.form-group__label--info Assistance Type
+        input#radio1.form-group__radio(type='radio' name='assistanceType')
+        label.form-group__label-radio(for='radio1') Contribution
+        input#radio2.form-group__radio(type='radio' name='assistanceType')
+        label.form-group__label-radio(for='radio2') Deduction
+      .form-group
+        label.form-group__label(for='description') Description
+        input#description.form-group__control(type='text', placeholder='Enter program description' name='description')
+      .form-group
+        label.form-group__label.form-group__label--info(for='payrollCode') Payroll Code
+        input#payrollCode.form-group__control(type='text', placeholder='Enter code' name='payrollCode')
+      .form-group
+        label.form-group__label.form-group__label--info Contribution vesting schedule
+        .form-group__controls-wrapper
+          select.form-group__control.form-group__control--select
+            option(value='') 1
+            option(value='') 2
+            option(value='') 3
+          select.form-group__control.form-group__control--select
+            option(value='') 1
+            option(value='') 2
+            option(value='') 3
+          input.form-group__control(type='text')
+        a.link.link--with-plus.setup__link-with-plus(href='#') Add another level
+      .form-group
+        label.form-group__label.form-group__label--info(for='defaultContributionAmount') Default contribution amount
+        input#defaultContributionAmount.form-group__control(type='text', placeholder='$0.00' name='defaultContributionAmount')
+    .card__btns-container.card__btns-container--bottom-right
+            button.btn.btn--size-40(type="button") Add

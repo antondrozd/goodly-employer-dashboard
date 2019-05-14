@@ -10,7 +10,7 @@ block dashboard
     .card.card--full-width
       .card__container
         .card__btns-container.card__btns-container--top-right
-          button.btn.btn--size-15 Invite Employee
+          button.btn.btn--size-15(data-toggle="modal" data-target="inviteEmployee") Invite Employee
         .card__header.card__header--bordered
           h2.card__title.card__title--big Employees
         .employees
@@ -176,3 +176,29 @@ block dashboard
                   a.dropdown__item(href="#") Resend invite
                   a.dropdown__item(href="#") Edit
                   a.dropdown__item(href="#") Delete
+  #inviteEmployee.modal.card
+    h3.card__title.modal__title Invite Employee
+    button.modal__close-btn.icon-btn
+      include /icons/close
+    form.modal__form
+      .form-group
+        label.form-group__label(for='employeeName') Employee Name
+        input#employeeName.form-group__control(type='text', placeholder='Enter name' name='employeeName')
+      .form-group
+        label.form-group__label(for='employeeId') Employee ID
+        input#employeeId.form-group__control(type='text', placeholder='Enter ID' name='employeeId')
+      .form-group
+        label.form-group__label(for='workEmail') Work Email
+        input#workEmail.form-group__control(type='email', placeholder='Enter email' name='workEmail')
+      .form-group
+        label.form-group__label(for='program') Program
+        input#program.form-group__control(type='text', placeholder='Select program' name='program')
+      .form-group
+        label.form-group__label(for='companyStartDate') Company Start Date
+        input#companyStartDate.form-group__control(type='text', placeholder='mm/dd/yyyy' name='companyStartDate')
+      .form-group
+        .form-group__controls-wrapper
+          input#activeEmployee.form-group__checkbox(type='checkbox')
+          label.form-group__label-checkbox.form-group__label-checkbox--brand-dark-color(for='activeEmployee') Active employee
+    .card__btns-container.card__btns-container--bottom-right
+      button.btn.btn--size-40(type="button") Send

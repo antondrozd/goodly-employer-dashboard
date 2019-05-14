@@ -65,7 +65,10 @@ function copy() {
 }
 
 function js() {
-  return gulp.src('src/js/**/*.js').pipe(gulp.dest('build/js'))
+  return gulp
+    .src('src/js/**/*.js')
+    .pipe(gulp.dest('build/js'))
+    .pipe(server.stream())
 }
 
 function build(done) {
