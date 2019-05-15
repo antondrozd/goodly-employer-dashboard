@@ -54,6 +54,7 @@
   &__title {
     margin: 0;
     margin-bottom: 3px;
+    padding-right: 60px;
     font-size: 22px;
     line-height: 28px;
     font-weight: $medium;
@@ -88,6 +89,7 @@
 
   &__subtitle {
     margin: 0;
+    padding-right: 60px;
     font-size: 14px;
     font-weight: $light;
     line-height: 1;
@@ -244,6 +246,7 @@
       }
 
       &__subtitle {
+        padding-right: 0;
         font-size: 18px;
         color: $gray-600;
       }

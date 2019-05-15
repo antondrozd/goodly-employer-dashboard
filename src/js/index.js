@@ -57,8 +57,9 @@ function accordion() {
   )
 
   accordion.forEach(acc => {
-    acc.addEventListener('click', () => {
+    acc.addEventListener('click', event => {
       const panel = acc.querySelector('.accordion__panel')
+      if (panel.contains(event.target)) return;
       acc.classList.toggle('accordion--active')
     })
   })

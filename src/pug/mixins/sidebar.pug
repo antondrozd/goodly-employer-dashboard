@@ -31,7 +31,12 @@ mixin sidebar(activeLink)
               | #{accordion.title}
             .accordion__panel
               each link, index in accordion.links
-                - const route = routes[index + links.length + accordionIndex + 1]
+                - let route
+                - if (accordionIndex == 0) {
+                - route = '#'
+                - } else {
+                - route = routes[index + links.length + accordionIndex + 1]
+                - }
 
                 - if (link === activeLink)
                   .sidebar__nav-item.sidebar__nav-item--active

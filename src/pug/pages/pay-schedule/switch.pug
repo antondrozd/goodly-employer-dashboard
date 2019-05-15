@@ -18,9 +18,9 @@ block dashboard
             .form__column
               .form-group.form-group--controls-new-line
                 label.form-group__label.form-group__label--big Company Payroll Interval
-                input#radio1.form-group__radio(type='radio' checked)
+                input#radio1.form-group__radio(type='radio' name="companyPayrollInterval" checked)
                 label.form-group__label-radio(for='radio1') Contribution
-                input#radio2.form-group__radio(type='radio')
+                input#radio2.form-group__radio(type='radio' name="companyPayrollInterval")
                 label.form-group__label-radio(for='radio2') Deduction
               .form-group
                 label.form-group__label(for='startDate') Paydays
@@ -36,9 +36,9 @@ block dashboard
                     option(value='') 3
               .form-group.form-group--controls-new-line
                 label.form-group__label.form-group__label--info Payroll adjust
-                input#radio3.form-group__radio(type='radio' checked)
+                input#radio3.form-group__radio(type='radio' name="payrollAdjust" checked)
                 label.form-group__label-radio(for='radio3') Left
-                input#radio4.form-group__radio(type='radio')
+                input#radio4.form-group__radio(type='radio' name="payrollAdjust")
                 label.form-group__label-radio(for='radio4') Right
             .form__column
               .form-group.form-group--small-mb
