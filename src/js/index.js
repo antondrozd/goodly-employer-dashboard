@@ -23,7 +23,7 @@ function dropdowns() {
   })
 }
 
-function modal() {
+function modals() {
   const modalBtns = Array.prototype.slice.call(
     document.querySelectorAll('[data-toggle="modal"]')
   )
@@ -51,25 +51,21 @@ function modal() {
   })
 }
 
-function accordion() {
-  const accordion = Array.prototype.slice.call(
+function accordions() {
+  const accordions = Array.prototype.slice.call(
     document.querySelectorAll('.accordion')
   )
 
-  accordion.forEach(acc => {
+  accordions.forEach(acc => {
     acc.addEventListener('click', event => {
       const panel = acc.querySelector('.accordion__panel')
-      if (panel.contains(event.target)) return;
+      if (panel.contains(event.target)) return
       acc.classList.toggle('accordion--active')
     })
   })
 }
 
-$(document).ready(() => {
-  dropdowns()
-  modal()
-  accordion()
-
+function selects() {
   $('select').each(function() {
     var $this = $(this),
       numberOfOptions = $(this).children('option').length
@@ -91,7 +87,7 @@ $(document).ready(() => {
     }).insertAfter($styledSelect)
 
     for (var i = 0; i < numberOfOptions; i++) {
-      $('<li />', {
+      var li = $('<li />', {
         text: $this
           .children('option')
           .eq(i)
@@ -101,7 +97,20 @@ $(document).ready(() => {
           .eq(i)
           .val(),
         class: $this.children('option').eq(i)[0].classList.value
-      }).appendTo($list)
+      })
+
+      var href = $this
+        .children('option')
+        .eq(i)
+        .attr('data-href')
+
+      if (href) {
+        li.click(function() {
+          window.location.href = href
+        })
+      }
+
+      li.appendTo($list)
     }
 
     var $listItems = $list.children('li')
@@ -138,4 +147,11 @@ $(document).ready(() => {
       $list.hide()
     })
   })
+}
+
+$(document).ready(() => {
+  dropdowns()
+  modals()
+  accordions()
+  selects()
 })
