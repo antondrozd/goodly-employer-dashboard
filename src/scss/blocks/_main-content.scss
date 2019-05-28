@@ -2,10 +2,20 @@
   position: absolute;
   top: 103px;
   left: 311px;
-  width: 74.9%;
+  box-sizing: border-box;
+  width: calc(100vw - 312px);
+  padding-right: 32px;
 
   &--setup-page {
     width: 83.34%;
     left: 8.33%;
+    padding-right: 0;
+  }
+  
+  @media #{$md} {
+    left: 0;
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
   }
 }

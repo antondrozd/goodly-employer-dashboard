@@ -27,6 +27,20 @@
   &__form {
     margin-bottom: 70px;
   }
+
+  @media #{$sm} {
+    top: 111px;
+    width: 84%;
+    padding: 25px 13px;
+
+    &__close-btn {
+      right: 13px;
+    }
+
+    &__form {
+      margin-bottom: 40px;
+    }
+  }
 }
 
 .overlay {

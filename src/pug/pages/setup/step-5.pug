@@ -28,10 +28,10 @@ block setup
               label.form-group__label(for='companyStartDate') Company Start Date
               input#companyStartDate.form-group__control(type='text', placeholder='mm/dd/yyyy' name='companyStartDate')
             .form-group
-              .form-group__controls-wrapper
+              .form-group__controls-wrapper.form-group__controls-wrapper--big-gap
                 input#activeEmployee.form-group__checkbox(type='checkbox')
                 label.form-group__label-checkbox.form-group__label-checkbox--brand-dark-color(for='activeEmployee') Active employee
-                .btn.btn--size-35.btn--gray Send Invite
+                button(type="button").btn.btn--size-35.btn--gray Send Invite
           .form__column.form__column--bordered-left
             .form-group.form-group--medium-mb
               b.form-group__label Share Invite Link
@@ -43,6 +43,6 @@ block setup
             .form-group
               label.form-group__label(for='shareMessage') Edit Share Message
               textarea#shareMessage.form-group__control.form-group__control--text-light(rows=5) Welcome! We’re inviting you to join us in Goodly to help pay off your student loans faster. https://goodlyapp.com/join/39nrbdoJaJcm
-            .btn.btn--size-35.btn--gray Copy Link
+            button(type="button").btn.btn--size-35.btn--gray Copy Link
           .card__btns-container.card__btns-container--bottom-right
             button.btn.btn--size-40(type="submit" disabled) Done

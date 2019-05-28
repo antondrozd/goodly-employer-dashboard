@@ -1,13 +1,15 @@
 mixin header({ multipleAccounts, account })
   header.main-header
     .main-header__wrapper
+      button.main-header__menu-icon.icon-btn
+        include /icons/menu-icon
       .main-header__logo
         include /blocks/logo
       .main-header__user-block
         button.icon-btn.main-header__bell-icon
           include /icons/bell
         .main-header__user-info
-          img.main-header__user-photo(src="/img/user.jpg", alt="user")
+          img.main-header__user-photo(src="/img/user.png", alt="user")
           .main-header__account-info
             span.main-header__user-name Sarah Porter
               span.main-header__expand-icon

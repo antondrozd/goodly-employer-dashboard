@@ -36,4 +36,22 @@
       }
     }
   }
+
+  @media #{$sm} {
+    &__container {
+      padding: 13px;
+    }
+
+    &--customize-with-programs {
+      background-size: 96px;
+      background-position: left 16px top 5%;
+
+      .alert {
+        &__container {
+          padding-left: 13px;
+          padding-top: 162px;
+        }
+      }
+    }
+  }
 }

@@ -76,4 +76,72 @@
     font-size: 14px;
     color: $gray-600;
   }
+
+  @media #{$sm} {
+    padding-top: 28px;
+
+    &__body {
+      grid-template-columns: 1fr;
+      grid-template-rows: 171px;
+      grid-auto-rows: 169px;
+      // max-height: 1780px;
+      // overflow-y: scroll;
+    }
+
+    &__header {
+      margin-bottom: 29px;
+    }
+
+    &__title {
+      margin: 0 auto;
+    }
+
+    &__arrows-container {
+      position: absolute;
+      width: 100%;
+    }
+
+    &__arrow {
+      position: absolute;
+      top: -10px;
+      margin: 0;
+
+      &--right {
+        right: 0;
+      }
+    }
+
+    &__day-item {
+      position: relative;
+      padding-top: 22px;
+      border: none !important;
+      border-left: 1px solid $gray-100 !important;
+      border-right: 1px solid $gray-100 !important;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 5%;
+        width: 90%;
+        height: 1px;
+        background-color: $gray-100;
+      }
+
+      &:first-of-type {
+        border-top: 1px solid $gray-100 !important;
+      }
+
+      &:last-of-type {
+        border-bottom: 1px solid $gray-100 !important;
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    &__day-number {
+      margin-top: 16px;
+    }
+  }
 }

@@ -40,7 +40,8 @@
     padding-right: 48%;
     padding-bottom: 24.7%;
     padding-left: 134px;
-    background: url('/img/setup-main.png') no-repeat 84.8% 13%;
+    background: url('/img/setup-main.png') no-repeat 84.8% calc(-4.1vw + 50%);
+    background-size: 36.2%;
 
     .setup {
       &__container {
@@ -81,6 +82,33 @@
       &__container {
         padding-right: 42px;
         padding-left: 53px;
+      }
+    }
+  }
+
+  @media #{$sm} {
+    &__steps {
+      margin-bottom: 9px;
+      border-bottom: none;
+    }
+
+    &__form {
+      margin-bottom: 0px;
+    }
+
+    &--main {
+      padding: 0;
+      padding-top: 256px;
+      background-size: 187px;
+      background-position: 49.5% -1.7%;
+    }
+
+    &--with-alert {
+      .setup {
+        &__container {
+          padding-right: 0;
+          padding-left: 0;
+        }
       }
     }
   }

@@ -22,9 +22,9 @@ block dashboard
                 label.form-group__label-radio(for='radio1') Contribution
                 input#radio2.form-group__radio(type='radio' name="companyPayrollInterval")
                 label.form-group__label-radio(for='radio2') Deduction
-              .form-group
+              .form-group.form-group--calendar
                 label.form-group__label.form-group__label--info(for='startDate') Start date
-                input#startDate.form-group__control.form-group__control--calendar(type='text', placeholder='04/01/2019' name='startDate')
+                input#startDate.form-group__control(type='text', placeholder='04/01/2019' name='startDate')
               .form-group.form-group--controls-new-line
                 label.form-group__label.form-group__label--info Payroll adjust
                 input#radio3.form-group__radio(type='radio' name="payrollAdjust")

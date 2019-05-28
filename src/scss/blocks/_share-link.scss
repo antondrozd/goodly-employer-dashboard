@@ -39,4 +39,20 @@
   &--w-95p {
     width: 95%;
   }
+
+  @media #{$sm} {
+    &__container {
+      padding-right: 0;
+      padding-left: 0;
+      background-color: transparent;
+    }
+
+    &__text {
+      margin-top: 4px;
+      
+      &--small {
+        font-size: 14px;
+      }
+    }
+  }
 }

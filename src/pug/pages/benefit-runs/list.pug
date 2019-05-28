@@ -9,14 +9,14 @@ block dashboard
   main.main-content.dashboard
     .card.card--full-width
       .card__container
-        .card__btns-container.card__btns-container--top-right
-          .form-group
-            select.form-group__control.form-group__control--btn-select
-              option List view
-              option(data-href="./") Calendar view
-          a.btn.btn--size-35(href="./create") Create Run
         .card__header.card__header--bordered
-          h2.card__title.card__title--big Benefit Runs
+          h2.card__title.card__title--big.card__title--info Benefit Runs
+          .card__btns-container.card__btns-container--top-right
+            .form-group
+              select.form-group__control.form-group__control--btn-select
+                option List view
+                option(data-href="./") Calendar view
+            a.btn.btn--size-35(href="./create") Create Run
         .table.table--benefit-runs
           .table__row.table__row--heading-row
             .table__cell.table__cell--heading Name

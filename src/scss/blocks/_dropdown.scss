@@ -49,4 +49,10 @@
       background-color: $gray-100;
     }
   }
+
+  @media #{$sm} {
+    &__list {
+      right: 0;
+    }
+  }
 }

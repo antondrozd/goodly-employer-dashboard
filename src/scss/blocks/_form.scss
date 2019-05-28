@@ -26,7 +26,7 @@
     &--bordered-left {
       padding-right: 0 !important;
       padding-left: 43px !important;
-      border-left: 2px solid $gray-100;
+      border-left: 1px solid $gray-100;
     }
 
     &--text-center {
@@ -51,6 +51,35 @@
 
       &__column {
         padding: 0 32px;
+      }
+    }
+  }
+
+  @media #{$sm} {
+    &__container {
+      padding: 0;
+    }
+
+    &__column {
+      padding: 0 !important;
+      width: 100%;
+
+      &--bordered-left {
+        margin-bottom: 20px;
+        padding-top: 30px !important;
+        padding-bottom: 20px !important;
+        border-left: none;
+        border-top: 1px solid $gray-100;
+        border-bottom: 1px solid $gray-100;
+      }
+    }
+
+    &--setup-wider-form {
+      .form {
+        &__container {
+          padding-right: 0;
+          padding-left: 0;
+        }
       }
     }
   }

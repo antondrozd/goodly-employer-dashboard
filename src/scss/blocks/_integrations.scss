@@ -1,5 +1,8 @@
 .integrations {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  
+  @media #{$sm} {
+    margin-top: 12px;
+  }
 }

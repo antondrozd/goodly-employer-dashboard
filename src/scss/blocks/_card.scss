@@ -57,7 +57,7 @@
     padding-right: 60px;
     font-size: 22px;
     line-height: 28px;
-    font-weight: $medium;
+    font-weight: $bold;
     color: $brand-dark-color;
 
     &--big {
@@ -80,6 +80,15 @@
 
       &::after {
         content: url("data:image/svg+xml;charset=UTF-8,%3csvg width='146' height='24' viewBox='0 0 146 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect x='0.5' y='0.5' width='145' height='23' rx='11.5' stroke='%230B3551'/%3e%3cpath d='M11.0193 16H12.6033V13.327H14.0113C15.2213 13.327 16.5633 12.59 16.5633 10.808C16.5633 8.949 15.2213 8.3 13.9123 8.3H11.0193V16ZM12.6033 11.897V9.73H13.7913C14.6713 9.73 14.9793 10.291 14.9793 10.797C14.9793 11.325 14.7043 11.897 13.8023 11.897H12.6033ZM17.6794 16H22.6074V14.57H19.2634V12.821H22.1344V11.435H19.2634V9.73H22.6074V8.3H17.6794V16ZM23.8135 16H25.3975V10.907L28.7305 16H30.3475V8.3H28.7635V13.404L25.4415 8.3H23.8135V16ZM31.8806 16H34.6856C36.6766 16 38.3486 14.57 38.3486 12.15C38.3486 9.862 36.9736 8.3 34.6966 8.3H31.8806V16ZM33.4646 14.57V9.73H34.5536C36.2916 9.73 36.7646 10.852 36.7646 12.139C36.7646 13.327 36.2366 14.57 34.6526 14.57H33.4646ZM39.6042 16H41.1882V8.3H39.6042V16ZM42.7197 16H44.3037V10.907L47.6367 16H49.2537V8.3H47.6697V13.404L44.3477 8.3H42.7197V16ZM54.3508 16.154C55.7588 16.154 56.4958 15.549 56.7158 15.263L56.9468 16H58.0028V11.677H54.8788V13.019H56.4298C56.3418 13.701 55.8798 14.68 54.4498 14.68C53.0528 14.68 52.1068 13.569 52.1068 12.15C52.1068 10.775 53.0198 9.62 54.3948 9.62C55.4728 9.62 55.9678 10.159 56.2208 10.808L57.7168 10.302C57.2988 9.169 56.3418 8.146 54.3068 8.146C52.0628 8.146 50.5228 9.906 50.5228 12.15C50.5228 14.438 52.0518 16.154 54.3508 16.154ZM67.5788 8.3L65.5658 13.899L63.5528 8.3H61.8478L64.7078 16H66.4348L69.2838 8.3H67.5788ZM70.198 16H75.126V14.57H71.782V12.821H74.653V11.435H71.782V9.73H75.126V8.3H70.198V16ZM76.321 16H77.905V13.118H78.829L80.402 16H82.14L80.38 12.887C81.183 12.568 81.799 11.842 81.799 10.621C81.799 9.334 80.864 8.3 79.28 8.3H76.321V16ZM77.905 11.732V9.73H79.126C79.874 9.73 80.226 10.17 80.226 10.731C80.226 11.259 79.885 11.732 79.126 11.732H77.905ZM83.2497 16H84.8337V8.3H83.2497V16ZM86.3542 16H87.9382V13.008H90.8312V11.622H87.9382V9.73H91.2712V8.3H86.3542V16ZM92.4665 16H94.0505V8.3H92.4665V16ZM99.146 16.143C100.884 16.143 101.984 15.329 102.556 13.899L101.049 13.404C100.84 14.042 100.29 14.68 99.179 14.68C97.903 14.68 96.891 13.668 96.891 12.15C96.891 10.709 97.826 9.609 99.135 9.609C100.268 9.609 100.84 10.236 101.06 11.028L102.589 10.533C102.061 8.894 100.719 8.135 99.113 8.135C96.869 8.135 95.307 9.796 95.307 12.139C95.307 14.614 96.935 16.143 99.146 16.143ZM108.638 16H110.255L107.373 8.3H105.712L102.819 16H104.447L105.008 14.482H108.077L108.638 16ZM105.536 13.052L106.537 10.335L107.549 13.052H105.536ZM111.69 16H113.274V9.774H115.419V8.3H109.545V9.774H111.69V16ZM116.432 16H118.016V8.3H116.432V16ZM123.222 16.143C125.752 16.143 127.171 14.207 127.171 12.139C127.171 10.06 125.763 8.135 123.222 8.135C120.67 8.135 119.273 10.06 119.273 12.139C119.273 14.207 120.681 16.143 123.222 16.143ZM123.222 14.669C121.715 14.669 120.857 13.569 120.857 12.139C120.857 10.709 121.715 9.609 123.222 9.609C124.729 9.609 125.587 10.709 125.587 12.139C125.587 13.569 124.718 14.669 123.222 14.669ZM128.432 16H130.016V10.907L133.349 16H134.966V8.3H133.382V13.404L130.06 8.3H128.432V16Z' fill='%230B3551'/%3e%3c/svg%3e ");
+        position: relative;
+        left: 14px;
+        bottom: -3px;
+      }
+    }
+
+    &--info {
+      &::after {
+        content: url("data:image/svg+xml;charset=UTF-8,%3csvg width='21' height='20' viewBox='0 0 21 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.5 0C5.20999 0 0.916656 4.48 0.916656 10C0.916656 15.52 5.20999 20 10.5 20C15.79 20 20.0833 15.52 20.0833 10C20.0833 4.48 15.79 0 10.5 0ZM9.54166 5V7H11.4583V5H9.54166ZM9.54166 9V15H11.4583V9H9.54166ZM2.83332 10C2.83332 14.41 6.27374 18 10.5 18C14.7262 18 18.1667 14.41 18.1667 10C18.1667 5.59 14.7262 2 10.5 2C6.27374 2 2.83332 5.59 2.83332 10Z' fill='%230B3551'/%3e%3c/svg%3e ");
         position: relative;
         left: 14px;
         bottom: -3px;
@@ -214,8 +223,9 @@
   }
 
   &--integration {
+    width: 330px;
     min-height: 209px;
-    margin-bottom: 0;
+    margin-right: 32px;
 
     .card {
       &__container {
@@ -276,6 +286,7 @@
 
       &__title {
         margin-bottom: 9px;
+        padding: 0 30px;
         font-size: 24px;
       }
 
@@ -402,5 +413,238 @@
 
   &--setup {
     padding: 32px 25px;
+  }
+
+  @media #{$sm} {
+    margin-bottom: 16px;
+
+    &__container {
+      padding: 32px 14px;
+    }
+
+    &__header {
+      &--bordered {
+        padding-bottom: 20px;
+      }
+
+      &--edit-heading {
+        .card {
+          &__title {
+            display: flex;
+            align-items: center;
+          }
+
+          &__heading-input {
+            min-width: auto;
+            flex-grow: 1;
+          }
+        }
+      }
+    }
+
+    &__title {
+      display: flex;
+      align-items: center;
+      padding-right: 0;
+      font-size: 22px;
+
+      &::after {
+        bottom: 0;
+      }
+
+      &--big {
+        font-size: 22px;
+      }
+
+      &--verified {
+        margin-top: 0;
+      }
+
+      &--pending-verification {
+        margin-top: 0;
+      }
+    }
+
+    &__nav-icon {
+      margin-left: 4px;
+    }
+
+    &__link {
+      &--left {
+        left: 0;
+      }
+    }
+
+    &__graph {
+      &--employee-account {
+        margin: 0;
+        margin-top: 33px;
+        margin-bottom: -14px;
+
+        picture {
+          display: block;
+          width: 100%;
+        }
+
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    &__btn {
+      margin-top: 27px;
+    }
+
+    &__btns-container {
+      position: static;
+      width: 100%;
+      text-align: center;
+
+      > * {
+        width: 100%;
+
+        &:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
+      }
+
+      &--top-right {
+        margin-top: 20px;
+      }
+    }
+
+    &__form {
+      margin-top: 19px !important;
+      margin-bottom: 0 !important;
+    }
+
+    &__amount {
+      margin-top: 32px;
+      margin-bottom: 71px;
+    }
+
+    &__amount-text {
+      margin-bottom: 11px;
+    }
+
+    &__dropdown {
+      right: 0;
+    }
+
+    &--setup {
+      padding-top: 4px;
+      padding-right: 0;
+      padding-left: 0;
+      border: none;
+    }
+
+    &--big {
+      .card {
+        &__container {
+          padding: 32px 14px;
+        }
+      }
+    }
+
+    &--with-bg-img {
+      .card {
+        &__container {
+          display: flex;
+          flex-direction: column;
+          min-height: 144px;
+          padding: 27px 32px;
+        }
+
+        &__title {
+          margin: 0;
+          font-size: 26px;
+          line-height: 29px;
+        }
+
+        &__btn {
+          align-self: flex-start;
+          width: auto;
+          margin-top: auto;
+        }
+      }
+    }
+
+    &--centered {
+      .card {
+        &__heading-icon {
+          margin-top: 0;
+          margin-bottom: 20px;
+        }
+
+        &__title {
+          justify-content: center;
+          margin-bottom: 14px;
+          padding: 0;
+        }
+
+        &__subtitle {
+          padding: 0;
+        }
+
+        &__btn {
+          width: auto;
+          margin-top: 37px;
+        }
+      }
+    }
+
+    &--full-width {
+      border: none;
+
+      .card {
+        &__container {
+          padding: 0;
+          padding-top: 10px;
+        }
+
+        &__title {
+          font-size: 24px;
+        }
+
+        &__subtitle {
+          padding-right: 0;
+          line-height: 21px;
+        }
+
+        &__dropdown {
+          top: 8px;
+        }
+      }
+    }
+
+    &--standart-paddings {
+      .card {
+        &__container {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+
+        &__dropdown {
+          right: -2px;
+        }
+      }
+    }
+
+    &--integration {
+      width: 100%;
+      margin-right: 0;
+
+      .card {
+        &__container {
+          padding-right: 14px !important;
+          padding-left: 14px !important;
+          padding-top: 42px;
+          padding-bottom: 32px;
+        }
+      }
+    }
   }
 }

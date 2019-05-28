@@ -37,7 +37,9 @@ block dashboard
         .card__container
           h2.card__title.card__title--big Employee Account Overview
           .card__graph.card__graph--employee-account
-            img(src="/img/graphs/employee-account.svg")
+            picture
+              source(srcset='/img/graphs/employee-account-mobile.svg', media='(max-width: 767px)')
+              img(src="/img/graphs/employee-account.svg")
       .card
         .card__container
           h2.card__title.card__title--big Employee Quick Invite
@@ -81,5 +83,5 @@ block dashboard
           a.link.card__link.card__link--left(href="#") View Benefit Runs
       .card.card--with-bg-img.card--bg-img-1
         .card__container
-          h2.card__title.card__title How to Set Up Benefit Runs and Programs in Goodly
+          h2.card__title How to Set Up Benefit Runs and Programs in Goodly
           a.btn.btn--size-20.btn--transparent.card__btn Learn more

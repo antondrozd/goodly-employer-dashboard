@@ -18,12 +18,14 @@ block dashboard
               .form-group
                 label.form-group__label(for='accountHolder') Account Holder
                 select#accountHolder.form-group__control.form-group__control--select(name='accountHolder')
+                  option(disabled selected) Company
                   option 1
                   option 2
                   option 3
               .form-group
                 label.form-group__label(for='accountType') Account Type
                 select#accountType.form-group__control.form-group__control--select(name='accountType')
+                  option(disabled selected) Checking
                   option 1
                   option 2
                   option 3

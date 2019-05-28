@@ -68,4 +68,25 @@
       }
     }
   }
+
+  @media #{$md} {
+    position: fixed;
+    top: 87px;
+    left: 0;
+    display: none;
+    min-height: calc(100vh - 87px);
+    background-color: $white;
+    box-shadow: 6px 10px 25px rgba(0, 0, 0, 0.2);
+    z-index: 20;
+
+    &__nav-list {
+      padding-top: 35px;
+      padding-right: 48px;
+      padding-left: 35px;
+    }
+
+    &--show {
+      display: block;
+    }
+  }
 }

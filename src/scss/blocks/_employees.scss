@@ -4,6 +4,7 @@
 
   &__columns {
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__column {
@@ -54,5 +55,30 @@
 
   &__textarea {
     min-height: calc(100% - 28px);
+  }
+
+  @media #{$sm} {
+    padding-top: 29px;
+
+    &__column {
+      width: 100%;
+      padding: 0 !important;
+
+      &:first-of-type {
+        margin-bottom: 21px;
+      }
+    }
+
+    &__brand-dark-text {
+      margin-bottom: 15px;
+    }
+
+    &__share-link {
+      margin-top: -7px;
+    }
+
+    &__textarea {
+      min-height: 74px;
+    }
   }
 }

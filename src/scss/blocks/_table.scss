@@ -23,7 +23,7 @@
     display: flex;
     align-items: stretch;
     padding-top: 22px;
-    padding-right: 30px;
+    padding-right: 15px;
     padding-bottom: 9px;
     font-size: 18px;
     font-weight: $regular;
@@ -52,7 +52,8 @@
   }
 
   &__cell-icon {
-    margin: 0 10px;
+    margin-left: 10px;
+    margin-right: -5px;
 
     &--search {
       position: relative;
@@ -93,8 +94,6 @@
   }
 
   &--benefit-runs-create {
-    margin-bottom: 211px;
-
     .table {
       &__row {
         grid-template-columns: 5.5% 45.6% minmax(120px, 41.2%) auto;
@@ -122,6 +121,89 @@
     .table {
       &__row {
         grid-template-columns: 21.6% 11.7% 20.9% 25.1% 15.1% auto;
+      }
+    }
+  }
+
+  @media #{$sm} {
+    .table {
+      &__row {
+        padding-left: 0;
+      }
+
+      &__cell {
+        padding-top: 18px;
+        padding-right: 12px;
+        padding-bottom: 19px;
+        font-size: 14px;
+
+        &--heading {
+          padding-top: 21px;
+          padding-bottom: 21px;
+        }
+      }
+
+      &__cell-icon {
+        &--search {
+          top: 0;
+          margin: 0 12px;
+        }
+      }
+    }
+
+    &--employees {
+      .table {
+        &__row {
+          grid-template-columns: 47.4% 21.6% auto;
+        }
+
+        &__cell {
+          &:nth-child(3) {
+            padding-right: 0;
+          }
+
+          &:nth-child(4),
+          &:nth-child(5),
+          &:nth-child(6) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &--benefit-runs {
+      .table {
+        &__row {
+          grid-template-columns: 53.5% 31.5% auto;
+        }
+
+        &__cell {
+          &:nth-child(3) {
+            padding-right: 0;
+          }
+
+          &:nth-child(4) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &--benefit-runs-create {
+      .table {
+        &__row {
+          grid-template-columns: 11.6% 50.6% 30.4% auto;
+        }
+
+        &__cell {
+          &:nth-child(4) {
+            padding-right: 0;
+          }
+        }
+
+        &__contribution-sum {
+          display: none;
+        }
       }
     }
   }

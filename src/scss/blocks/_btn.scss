@@ -20,7 +20,7 @@
     cursor: default;
   }
 
-  &:hover {
+  &:hover:not([disabled]) {
     filter: brightness(1.07);
   }
 
@@ -100,5 +100,13 @@
   &--green {
     color: $white;
     background-color: $green;
+  }
+
+  @media #{$sm} {
+    width: 100%;
+
+    &--calendar-btn {
+      width: 92%;
+    }
   }
 }

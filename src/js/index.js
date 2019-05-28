@@ -1,3 +1,12 @@
+function mobileMenu() {
+  const toggleBtn = document.querySelector('.main-header__menu-icon')
+  const menu = document.querySelector('.sidebar')
+
+  toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('sidebar--show')
+  })
+}
+
 function dropdowns() {
   const dropdowns = Array.prototype.slice.call(
     document.querySelectorAll('.dropdown')
@@ -150,6 +159,7 @@ function selects() {
 }
 
 $(document).ready(() => {
+  mobileMenu()
   dropdowns()
   modals()
   accordions()

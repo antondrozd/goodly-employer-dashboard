@@ -47,4 +47,35 @@
     margin-right: 24px;
     margin-left: auto;
   }
+
+  @media #{$sm} {
+    margin-top: 10px;
+
+    &__list {
+      padding-left: 7px;
+    }
+
+    &__item {
+      flex-wrap: wrap;
+      padding-bottom: 23px;
+    }
+
+    &__icon {
+      svg {
+        min-height: 21px;
+      }
+    }
+
+    &__text-container {
+      width: 80%;
+      flex-grow: 1;
+      padding-right: 0;
+    }
+
+    &__badge {
+      margin: 0;
+      margin-top: 12px;
+      margin-left: 47px;
+    }
+  }
 }

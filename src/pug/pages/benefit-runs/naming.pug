@@ -9,14 +9,14 @@ block dashboard
   main.main-content.dashboard
     .card.card--full-width
       .card__container
-        .card__btns-container.card__btns-container--top-right
-          button.btn.btn--transparent-gray.btn--size-30 Refresh
-          a.btn.btn--size-40(href="./confirmation") Next
         .card__header.card__header--bordered.card__header--edit-heading
           h2.card__title.card__title--big
             a.icon-btn.card__nav-icon(href="/benefit-runs")
               include /icons/navigation-arrow-back
             input.card__heading-input(type='text' value="April Run")
+          .card__btns-container.card__btns-container--top-right
+            button.btn.btn--transparent-gray.btn--size-30 Refresh
+            a.btn.btn--size-40(href="./confirmation") Next
         .table.table--benefit-runs-create
           .table__row.table__row--heading-row
             .table__cell.table__cell--heading
@@ -26,7 +26,9 @@ block dashboard
             .table__cell.table__cell--heading Name (16)
               button.icon-btn.table__cell-icon.table__cell-icon--search(type="button")
                 include /icons/search
-            .table__cell.table__cell--heading Contribution ($2,200)
+            .table__cell.table__cell--heading
+              span Contribution&#32;
+                span.table__contribution-sum ($2,200)
 
           - for (let i = 1; i <= 10; i++) {
             .table__row
