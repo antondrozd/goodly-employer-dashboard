@@ -89,4 +89,8 @@
       display: block;
     }
   }
+
+  @media (min-width: 1600px) {
+    position: absolute;
+  }
 }
